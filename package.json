@@ -1,0 +1,38 @@
+{
+  "name": "coding-gods.com-client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --write ../../../../Загрузки/coding-gods (3).com-client-main",
+    "lint": "eslint ../../../../Загрузки/coding-gods (3).com-client-main --ext ts --ext tsx --ext js --fix",
+    "types": "tsc --pretty --noEmit",
+    "test-all": "npm run format && npm run lint && npm run types && npm run build"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "eslint-plugin-sonarjs": "^2.0.4",
+    "eslint-plugin-unicorn": "^56.0.0",
+    "next": "15.0.3",
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "@tailwindcss/forms": "^0.5.9",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.3",
+    "postcss": "^8",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
