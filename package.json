@@ -6,8 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "format": "prettier --write ../../../../Загрузки/coding-gods (3).com-client-main",
-    "lint": "eslint ../../../../Загрузки/coding-gods (3).com-client-main --ext ts --ext tsx --ext js --fix",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext ts --ext tsx --ext js --fix",
     "types": "tsc --pretty --noEmit",
     "test-all": "npm run format && npm run lint && npm run types && npm run build"
   },
