@@ -6,6 +6,7 @@ import '@/app/globals.css';
 import {LangSelector} from "@/components/Shared/LangSelector/LangSelector";
 import Link from "next/link";
 import {getTranslate} from "@/tolgee/server";
+import {Header} from "@/components/layout/Header/Header";
 
 type Props = {
   children: ReactNode;
@@ -20,6 +21,7 @@ export default async function LocaleLayout({ children }: Props) {
     <html lang={locale}>
     <body>
     <TolgeeNextProvider language={locale} staticData={staticData}>
+      <Header/>
       <nav className={'flex justify-center gap-4'}>
         <Link href={'/about'}>{t("aboutPage")}</Link>
         <Link href={'/portfolio'}>{t("contactsPage")}</Link>
