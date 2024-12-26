@@ -3,10 +3,10 @@ import { TolgeeNextProvider } from '@/tolgee/client';
 import { getStaticData } from '@/tolgee/shared';
 import { getLanguage } from '@/tolgee/language';
 import '@/app/globals.css';
-import { LangSelector } from '@/components/Shared/LangSelector/LangSelector';
 import Link from 'next/link';
 import { getTranslate } from '@/tolgee/server';
 import { Header } from '@/components/layout/Header/Header';
+import { Footer } from '@/components/layout/Footer/Footer';
 
 type Props = {
   children: ReactNode;
@@ -27,8 +27,8 @@ export default async function LocaleLayout({ children }: Props) {
             <Link href={'/portfolio'}>{t('contactsPage')}</Link>
             <Link href={'/contacts'}>{t('portfolioPage')}</Link>
           </nav>
-          <LangSelector />
           {children}
+          <Footer />
         </TolgeeNextProvider>
       </body>
     </html>

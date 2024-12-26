@@ -8,7 +8,7 @@ export const Header = () => {
     <header>
       <div className="container flex items-center justify-between py-8">
         <LangSelector />
-        <Logo />
+        <Logo fontSize={'text-base md:text-2xl'} />
         <MenuButton />
       </div>
     </header>
