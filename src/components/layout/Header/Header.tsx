@@ -1,15 +1,15 @@
 import React from 'react';
-import Link from "next/link";
-import {LangSelector} from "@/components/Shared/LangSelector/LangSelector";
-import {MenuButton} from "@/components/Shared/button/MenuButton/MenuButton";
+import { LangSelector } from '@/components/Shared/LangSelector/LangSelector';
+import { MenuButton } from '@/components/Shared/button/MenuButton/MenuButton';
+import { Logo } from '@/components/Shared/Logo/Logo';
 
 export const Header = () => {
   return (
     <header>
-      <div className="container flex justify-between items-center py-8">
-        <LangSelector/>
-        <Link href='/' className='text-accentColor'>CODING GODS</Link>
-        <MenuButton/>
+      <div className="container flex items-center justify-between py-8">
+        <LangSelector />
+        <Logo />
+        <MenuButton />
       </div>
     </header>
   );
