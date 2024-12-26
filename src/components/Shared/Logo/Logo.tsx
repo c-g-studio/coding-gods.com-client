@@ -1,10 +1,13 @@
 import React, { FC } from 'react';
 import Link from 'next/link';
-import { TextProps } from '@/types/TextProps';
 
-export const Logo: FC<TextProps> = ({ fontSize }) => {
+export type TLogoProps = {
+  fontSize: string;
+};
+
+export const Logo: FC<TLogoProps> = ({ fontSize }) => {
   return (
-    <Link href="/" className={`text-accentColor ${fontSize}`}>
+    <Link href="/" className={`text-accentColor ${fontSize} font-baloo`}>
       CODING GODS
     </Link>
   );

@@ -30,6 +30,12 @@ export default {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
       },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
+        baloo: 'Baloo Bhaijaan 2, sans-serif',
+        bungee: ['Bungee Shade', 'sans-serif'],
+      },
     },
   },
   plugins: [require('@tailwindcss/forms')],

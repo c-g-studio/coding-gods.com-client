@@ -51,24 +51,20 @@ export const LangSelector: React.FC = () => {
       {/*Планшет/Десктоп версия*/}
       <div className="hidden items-center gap-4 md:flex">
         {ALL_LANGUAGES.map((lang, index) => (
-          <>
-            <button
-              key={lang}
-              onClick={() => handleLangChange(lang)}
-              className="relative pb-1 uppercase"
-              value={lang}
-            >
-              {lang}
-              {selectedLang === lang && (
-                <span className="absolute bottom-0 left-0">
-                  <ActiveLangLine width={20} height={1} />
-                </span>
-              )}
-            </button>{' '}
+          <button
+            key={lang}
+            onClick={() => handleLangChange(lang)}
+            className="relative flex items-center gap-4 uppercase"
+            value={lang}
+          >
+            {lang}
+            {selectedLang === lang && (
+              <span className="absolute bottom-0 left-0 w-5 border-t bg-foreground"></span>
+            )}
             {index < ALL_LANGUAGES.length - 1 && (
               <LangDotIcon width={5} height={5} />
             )}
-          </>
+          </button>
         ))}
       </div>
     </div>

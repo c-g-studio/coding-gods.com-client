@@ -9,8 +9,8 @@ export const ActiveLangLine: FC<TIconProps> = ({width, height, ...restSVGProps})
       <defs>
         <radialGradient id="paint0_radial_640_1838" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
                         gradientTransform="translate(10.5 1) rotate(-180) scale(10 0.630118)">
-          <stop stop-color="white"/>
-          <stop offset="1" stop-color="white" stop-opacity="0"/>
+          <stop stopColor="white"/>
+          <stop offset="1" stopColor="white" stopOpacity="0"/>
         </radialGradient>
       </defs>
     </svg>
