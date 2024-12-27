@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { getTranslate } from '@/tolgee/server';
 import { Header } from '@/components/layout/Header/Header';
 import { Footer } from '@/components/layout/Footer/Footer';
+import { baloo, bungee, interMedium, interRegular, roboto } from '@/app/fonts';
 
 type Props = {
   children: ReactNode;
@@ -18,7 +19,10 @@ export default async function LocaleLayout({ children }: Props) {
   const t = await getTranslate();
 
   return (
-    <html lang={locale}>
+    <html
+      lang={locale}
+      className={`${baloo.variable} ${roboto.variable} ${interRegular.variable} ${interMedium.variable} ${bungee.variable}`}
+    >
       <body>
         <TolgeeNextProvider language={locale} staticData={staticData}>
           <Header />

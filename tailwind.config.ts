@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import { interMedium, interRegular } from '@/app/fonts';
 
 export default {
   content: [
@@ -31,10 +32,11 @@ export default {
         foreground: 'var(--foreground)',
       },
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-        roboto: ['Roboto', 'sans-serif'],
-        baloo: 'Baloo Bhaijaan 2, sans-serif',
-        bungee: ['Bungee Shade', 'sans-serif'],
+        interRegular: 'var(--font-inter-regular)',
+        interMedium: 'var(--font-inter-medium)',
+        roboto: 'var(--font-roboto)',
+        baloo: 'var(--font-baloo)',
+        bungee: 'var(--font-bungee-regular)',
       },
     },
   },

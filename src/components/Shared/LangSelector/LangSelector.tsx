@@ -32,7 +32,7 @@ export const LangSelector: React.FC = () => {
           onChange={onSelectChange}
           value={language}
           className={clsx(
-            'block cursor-pointer appearance-none border-none bg-background bg-none p-0 pr-8 uppercase text-foreground',
+            'block cursor-pointer appearance-none border-none bg-background bg-none p-0 pr-8 font-roboto uppercase text-foreground',
           )}
         >
           {ALL_LANGUAGES.map(lang => (
@@ -54,12 +54,12 @@ export const LangSelector: React.FC = () => {
           <button
             key={lang}
             onClick={() => handleLangChange(lang)}
-            className="relative flex items-center gap-4 uppercase"
+            className="relative flex items-center gap-4 font-roboto uppercase"
             value={lang}
           >
             {lang}
             {selectedLang === lang && (
-              <span className="absolute bottom-0 left-0 w-5 border-t bg-foreground"></span>
+              <span className="absolute bottom-0 left-1/4 h-[1px] w-5 -translate-x-1/2 transform rounded-t-full bg-gradient-to-r from-transparent via-foreground to-transparent"></span>
             )}
             {index < ALL_LANGUAGES.length - 1 && (
               <LangDotIcon width={5} height={5} />
