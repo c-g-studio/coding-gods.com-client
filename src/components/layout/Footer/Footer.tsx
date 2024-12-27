@@ -5,15 +5,16 @@ import FooterList from '@/components/Shared/FooterList/FooterList';
 import { ALL_SOCIALS, SITEMAP_ITEMS } from '@/constants/constants';
 import { SubmitButton } from '@/components/Shared/button/SubmitBtn/SubmitButton';
 import s from './Footer.module.css';
+import { GradientLine } from '@/components/Shared/GradientLine/GradientLine';
 
 export const Footer = () => {
   return (
     <footer
-      className={`${s.footer} lg:pb-[41px]} relative pb-[51px] pt-[44px] md:pb-[27px]`}
+      className={`${s.footer} lg:pb-[41px]} relative pb-[51px] md:pb-[27px]`}
     >
-      <div className="absolute left-0 top-0 h-[1px] w-full bg-gradient-to-r from-transparent via-foreground to-transparent"></div>
+      <GradientLine positionY={'top'} />
 
-      <div className="container relative flex flex-col">
+      <div className="container relative flex flex-col pt-[44px]">
         <div className="mb-[43px] flex flex-col flex-wrap justify-between gap-y-16 md:mb-[74px] md:flex-row md:gap-x-20 lg:mb-[58px]">
           <div className="flex flex-col gap-16">
             <div>
@@ -48,7 +49,7 @@ export const Footer = () => {
             <SubmitButton height={'h-10'} textTransform={'normal-case'} />
           </form>
         </div>
-        <span className="absolute top-[620.72] z-10 font-bungee text-[34.54px] text-accentColor opacity-10 md:top-[266.71px] md:text-[84.311px] lg:top-[154px] lg:text-[128px]">
+        <span className="absolute top-[665.72] z-10 font-bungee text-[34.54px] text-accentColor opacity-10 md:top-[310.71px] md:text-[84.311px] lg:top-[198px] lg:text-[128px]">
           CODING GODS
         </span>
         <div className="h-[1px] w-full bg-accentColor"></div>
