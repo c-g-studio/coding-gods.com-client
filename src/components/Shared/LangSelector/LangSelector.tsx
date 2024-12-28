@@ -8,7 +8,7 @@ import { Select } from '@headlessui/react';
 import { clsx } from 'clsx';
 import { LangIcon } from '../../../../public/icons/LangIcon';
 import { LangDotIcon } from '../../../../public/icons/LangDotIcon';
-import { ActiveLangLine } from '../../../../public/icons/ActiveLangLine';
+// import { ActiveLangLine } from '../../../../public/icons/ActiveLangLine';
 
 function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
   setLanguage(event.target.value);
