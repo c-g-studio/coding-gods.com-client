@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { TFooterList } from '@/components/Shared/FooterList/footerList.types';
+import { TFooterList } from '@/components/shared/FooterList/footerList.types';
 
 const FooterList: FC<TFooterList> = ({ arr }) => {
   return (

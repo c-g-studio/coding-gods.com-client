@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import { TolgeeNextProvider } from '@/tolgee/client';
 import { getStaticData } from '@/tolgee/shared';
 import { getLanguage } from '@/tolgee/language';
@@ -9,11 +8,9 @@ import { Header } from '@/components/layout/Header/Header';
 import { Footer } from '@/components/layout/Footer/Footer';
 import { baloo, bungee, interMedium, interRegular, roboto } from '@/app/fonts';
 
-type Props = {
-  children: ReactNode;
-};
+import { WithChildren } from '@/types/common';
 
-export default async function LocaleLayout({ children }: Props) {
+export default async function LocaleLayout({ children }: WithChildren) {
   const locale = await getLanguage();
   const staticData = await getStaticData([locale]);
   const t = await getTranslate();

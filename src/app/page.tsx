@@ -1,8 +1,21 @@
 // import Image from 'next/image';
 
+import { Typography } from '@/components/ui/Typography/Typography';
+
 export default async function Home() {
   return (
-    <div>asd</div>
+    <>
+      <Typography variant="h1">РОЗРОБКА ЦИФРОВИХ ПРОДУКТІВ</Typography>
+      <Typography variant="h2">Про нас</Typography>
+      <Typography variant="p">
+        Ми - команда клієнтоорієнтованих фахівців, що вірить у силу інтернету як
+        інструменту для трансформації бізнесу та творчості. Наша студія
+        спеціалізується на дизайні та розробці веб-сайтів, створюючи унікальні
+        інтернет-простори, які відзеркалюють ваш бренд та привертають увагу
+        аудиторії. Ваші бізнес-цілі для нас завжди є відправною точкою.
+      </Typography>
+      <Typography variant="h3">Брендинг</Typography>
+    </>
     // <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
     //   <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
     //     <Image
