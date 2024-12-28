@@ -6,8 +6,8 @@ import { setLanguage } from '@/tolgee/language';
 import { ALL_LANGUAGES } from '@/constants/constants';
 import { Select } from '@headlessui/react';
 import { clsx } from 'clsx';
-import { LangIcon } from '../../../../public/icons/LangIcon';
-import { LangDotIcon } from '../../../../public/icons/LangDotIcon';
+import { LangIcon } from '@/components/icons/LangIcon';
+import { LangDotIcon } from '@/components/icons/LangDotIcon';
 // import { ActiveLangLine } from '../../../../public/icons/ActiveLangLine';
 
 function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {

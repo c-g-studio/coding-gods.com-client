@@ -29,6 +29,7 @@ export default {
         btnText: '#0A0A0A',
         btnAccentHover: '#FBA600',
         btnNotActive: '#CDCDCD',
+        cardBorder: '#D9D9D9',
         background: 'var(--background)',
         foreground: 'var(--foreground)',
       },

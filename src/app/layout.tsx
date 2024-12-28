@@ -1,8 +1,8 @@
+import Link from 'next/link';
 import { TolgeeNextProvider } from '@/tolgee/client';
 import { getStaticData } from '@/tolgee/shared';
 import { getLanguage } from '@/tolgee/language';
 import '@/app/globals.css';
-import Link from 'next/link';
 import { getTranslate } from '@/tolgee/server';
 import { Header } from '@/components/layout/Header/Header';
 import { Footer } from '@/components/layout/Footer/Footer';
