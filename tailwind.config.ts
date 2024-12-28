@@ -1,5 +1,4 @@
 import type { Config } from 'tailwindcss';
-import { interMedium, interRegular } from '@/app/fonts';
 
 export default {
   content: [
@@ -19,9 +18,11 @@ export default {
         },
       },
       screens: {
-        sm: '320px',
+        sm: '100%',
         md: '768px',
         lg: '1200px',
+        xl: '1440px',
+        '2xl': '1440px',
       },
       colors: {
         accentColor: '#FFAC0C',

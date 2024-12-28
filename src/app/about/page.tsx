@@ -3,10 +3,5 @@ import { getTranslate } from '@/tolgee/server';
 export default async function AboutPage() {
   const t = await getTranslate();
 
-
-  return (
-    <div className="text-4xl text-center font-bold">
-      {t("aboutPage")}
-    </div>
-  );
+  return <div className="text-center text-4xl font-bold">{t('aboutPage')}</div>;
 }

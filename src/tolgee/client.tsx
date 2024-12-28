@@ -3,7 +3,7 @@
 import { TolgeeBase } from './shared';
 import { TolgeeProvider, TolgeeStaticData } from '@tolgee/react';
 import { useRouter } from 'next/navigation';
-import {ReactNode, useEffect} from 'react';
+import { ReactNode, useEffect } from 'react';
 
 type Props = {
   language: string;
@@ -14,10 +14,10 @@ type Props = {
 const tolgee = TolgeeBase().init();
 
 export const TolgeeNextProvider = ({
-                                     language,
-                                     staticData,
-                                     children,
-                                   }: Props) => {
+  language,
+  staticData,
+  children,
+}: Props) => {
   const router = useRouter();
 
   useEffect(() => {

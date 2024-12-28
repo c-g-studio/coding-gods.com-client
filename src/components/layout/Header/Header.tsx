@@ -1,6 +1,6 @@
 import React from 'react';
 import { LangSelector } from '@/components/Shared/LangSelector/LangSelector';
-import { MenuButton } from '@/components/Shared/button/MenuButton/MenuButton';
+import { MenuButton } from '@/components/Shared/Buttons/MenuButton/MenuButton';
 import { Logo } from '@/components/Shared/Logo/Logo';
 import { GradientLine } from '@/components/Shared/GradientLine/GradientLine';
 

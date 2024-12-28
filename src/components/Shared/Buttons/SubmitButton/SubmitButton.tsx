@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { TSubmitButton } from '@/components/Shared/button/SubmitBtn/SubmitButton.types';
+import { TSubmitButton } from '@/components/Shared/Buttons/SubmitButton/submitButton.types';
 
 export const SubmitButton: FC<TSubmitButton> = ({ height, textTransform }) => {
   return (

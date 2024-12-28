@@ -8,4 +8,5 @@ export const SITEMAP_ITEMS = [
   'Відгуки',
   'Політика приватності',
 ];
+
 export const ALL_SOCIALS = ['Facebook', 'X (Twitter)', 'LinkedIn', 'Instagram'];

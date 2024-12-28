@@ -1,20 +1,20 @@
 import React from 'react';
 import { Logo } from '@/components/Shared/Logo/Logo';
-import Input from '@/components/Shared/formElements/Input/Input';
+import Input from '@/components/Shared/FormElements/Input/Input';
 import FooterList from '@/components/Shared/FooterList/FooterList';
 import { ALL_SOCIALS, SITEMAP_ITEMS } from '@/constants/constants';
-import { SubmitButton } from '@/components/Shared/button/SubmitBtn/SubmitButton';
+import { SubmitButton } from '@/components/Shared/Buttons/SubmitButton/SubmitButton';
 import s from './Footer.module.css';
 import { GradientLine } from '@/components/Shared/GradientLine/GradientLine';
 
 export const Footer = () => {
   return (
     <footer
-      className={`${s.footer} lg:pb-[41px]} relative pb-[51px] md:pb-[27px]`}
+      className={`${s.footer} lg:pb-[41px]} relative pb-[51px] pt-11 md:pb-[27px]`}
     >
-      <GradientLine positionY={'top'} />
+      <GradientLine positionY={'top-0'} />
 
-      <div className="container relative flex flex-col pt-[44px]">
+      <div className="container flex flex-col">
         <div className="mb-[43px] flex flex-col flex-wrap justify-between gap-y-16 md:mb-[74px] md:flex-row md:gap-x-20 lg:mb-[58px]">
           <div className="flex flex-col gap-16">
             <div>
@@ -53,9 +53,9 @@ export const Footer = () => {
           CODING GODS
         </span>
         <div className="h-[1px] w-full bg-accentColor"></div>
-        <small className="mt-[45px] self-center md:mt-[43px]">
-          Всі права захищено @Coding Gods 2024
-        </small>
+        <p className="mt-[45px] self-center md:mt-[43px]">
+          Всі права защищено @Coding Gods 2024
+        </p>
       </div>
     </footer>
   );
