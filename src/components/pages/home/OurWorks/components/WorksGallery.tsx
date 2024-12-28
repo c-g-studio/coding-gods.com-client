@@ -16,7 +16,7 @@ const Item: FC<WithChildren & WithClassName> = ({ children, className }) => {
   return (
     <li
       className={classnames(
-        'border-cardBorder rounded-md border border-opacity-20 p-4',
+        'rounded-md border border-cardBorder border-opacity-20 p-4',
         className,
       )}
     >

@@ -11,7 +11,7 @@ const Item: FC<WithChildren & WithClassName> = ({ children, className }) => {
   return (
     <ul
       className={classnames(
-        'border-cardBorder rounded-[20px] border border-opacity-20 bg-[linear-gradient(0deg,#0A0A0A,#0A0A0A),linear-gradient(131.5deg,rgba(155,155,155,0.2)_7.71%,rgba(0,0,0,0)_71.33%)] px-4 py-10 md:px-[26px]',
+        'rounded-[20px] border border-cardBorder border-opacity-20 bg-[linear-gradient(0deg,#0A0A0A,#0A0A0A),linear-gradient(131.5deg,rgba(155,155,155,0.2)_7.71%,rgba(0,0,0,0)_71.33%)] px-4 py-10 md:px-[26px]',
         className,
       )}
     >
