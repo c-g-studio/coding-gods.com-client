@@ -12,8 +12,10 @@
     "test-all": "npm run format && npm run lint && npm run types && npm run build"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.0",
     "@tolgee/react": "^5.33.1",
     "autoprefixer": "^10.4.20",
+    "clsx": "^2.1.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "eslint-plugin-sonarjs": "^2.0.4",

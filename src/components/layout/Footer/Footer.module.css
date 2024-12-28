@@ -1,0 +1,14 @@
+.footer {
+  background: linear-gradient(
+      132deg,
+      rgba(155, 155, 155, 0.2) 7.71%,
+      rgba(0, 0, 0, 0) 71.33%
+    ),
+    #0a0a0a;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    background: none;
+  }
+}

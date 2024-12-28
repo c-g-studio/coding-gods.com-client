@@ -1,12 +1,12 @@
-import { TolgeeBase,  getStaticData } from './shared';
+import { TolgeeBase, getStaticData } from './shared';
 
 import { createServerInstance } from '@tolgee/react/server';
 import { getLanguage } from './language';
-import {ALL_LANGUAGES} from "@/constants/constants";
+import { ALL_LANGUAGES } from '@/constants/constants';
 
 export const { getTolgee, getTranslate, T } = createServerInstance({
   getLocale: getLanguage,
-  createTolgee: async (locale) =>
+  createTolgee: async locale =>
     TolgeeBase().init({
       // including all locales
       // on server we are not concerned about bundle size
