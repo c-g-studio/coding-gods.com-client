@@ -1,11 +1,11 @@
 import React from 'react';
-import { Logo } from '@/components/Shared/Logo/Logo';
-import Input from '@/components/Shared/FormElements/Input/Input';
-import FooterList from '@/components/Shared/FooterList/FooterList';
+import { Logo } from '@/components/shared/Logo/Logo';
+import Input from '@/components/shared/FormElements/Input/Input';
+import FooterList from '@/components/shared/FooterList/FooterList';
 import { ALL_SOCIALS, SITEMAP_ITEMS } from '@/constants/constants';
-import { SubmitButton } from '@/components/Shared/Buttons/SubmitButton/SubmitButton';
+import { SubmitButton } from '@/components/shared/Buttons/SubmitButton/SubmitButton';
 import s from './Footer.module.css';
-import { GradientLine } from '@/components/Shared/GradientLine/GradientLine';
+import { GradientLine } from '@/components/shared/GradientLine/GradientLine';
 
 export const Footer = () => {
   return (

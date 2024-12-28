@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { TGradientLine } from '@/components/Shared/GradientLine/gradientLine.types';
+import { TGradientLine } from '@/components/shared/GradientLine/gradientLine.types';
 
 export const GradientLine: FC<TGradientLine> = ({ positionY }) => {
   return (

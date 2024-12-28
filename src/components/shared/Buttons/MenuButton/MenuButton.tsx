@@ -1,5 +1,5 @@
 import React from 'react';
-import { MenuIcon } from '../../../../../public/icons/MenuIcon';
+import { MenuIcon } from '@/components/icons/MenuIcon';
 
 export const MenuButton = () => {
   return (
