@@ -33,8 +33,7 @@ export default {
         foreground: 'var(--foreground)',
       },
       fontFamily: {
-        interRegular: 'var(--font-inter-regular)',
-        interMedium: 'var(--font-inter-medium)',
+        inter: 'var(--font-inter-regular)',
         roboto: 'var(--font-roboto)',
         baloo: 'var(--font-baloo)',
         bungee: 'var(--font-bungee-regular)',
