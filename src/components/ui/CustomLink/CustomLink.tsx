@@ -3,9 +3,9 @@ import { LinkProps } from 'next/dist/client/link';
 import Link from 'next/link';
 
 import { classnames } from '@/utils/classnames';
+import { Icon } from '@/components/ui/Icon/Icon';
 
 import { WithChildren, WithClassName } from '@/types/common';
-import { ArrowTopRight } from '@/components/icons/ArrowTopRight';
 
 type Props = WithChildren &
   WithClassName & {
@@ -21,7 +21,7 @@ export const CustomLink: FC<Props> = ({ children, className, href }) => {
       )}
       href={href}
     >
-      {children} <ArrowTopRight width={10} height={10} />
+      {children} <Icon type="arrowTopRight" width={10} height={10} />
     </Link>
   );
 };
