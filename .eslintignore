@@ -7,3 +7,4 @@ next.config.ts
 tailwind.config.ts
 !/.swc/
 /coverage
+updateLocales.js
