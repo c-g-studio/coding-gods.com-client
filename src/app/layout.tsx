@@ -14,7 +14,6 @@ export default async function LocaleLayout({ children }: WithChildren) {
   const locale = await getLanguage();
   const staticData = await getStaticData([locale]);
   const t = await getTranslate();
-
   return (
     <html
       lang={locale}
