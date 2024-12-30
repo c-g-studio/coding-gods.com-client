@@ -1,14 +1,13 @@
 'use client';
 
 import React, { ChangeEvent, useState } from 'react';
+import { Select } from '@headlessui/react';
+import { clsx } from 'clsx';
+
+import { Icon } from '@/components/ui/Icon/Icon';
 import { useTolgee } from '@tolgee/react';
 import { setLanguage } from '@/tolgee/language';
 import { ALL_LANGUAGES } from '@/constants/constants';
-import { Select } from '@headlessui/react';
-import { clsx } from 'clsx';
-import { LangIcon } from '@/components/icons/LangIcon';
-import { LangDotIcon } from '@/components/icons/LangDotIcon';
-// import { ActiveLangLine } from '../../../../public/icons/ActiveLangLine';
 
 function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
   setLanguage(event.target.value);
@@ -44,7 +43,7 @@ export const LangSelector: React.FC = () => {
           {/*<option value="uk">🇨🇿 Ukraine</option>*/}
         </Select>
         <span className="pointer-events-none absolute right-0">
-          <LangIcon width={24} height={24} />
+          <Icon type="lang" width={24} height={24} />
         </span>
       </div>
 
@@ -62,7 +61,7 @@ export const LangSelector: React.FC = () => {
               <span className="absolute bottom-0 left-1/4 h-[1px] w-5 -translate-x-1/2 transform rounded-t-full bg-gradient-to-r from-transparent via-foreground to-transparent"></span>
             )}
             {index < ALL_LANGUAGES.length - 1 && (
-              <LangDotIcon width={5} height={5} />
+              <Icon type="langDot" width={5} height={5} />
             )}
           </button>
         ))}

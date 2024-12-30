@@ -84,11 +84,10 @@ function writeLocales(translations) {
     for (let lang in translations) {
       const currentLang = translations[lang];
       for (let ns in currentLang) {
-        const dirPath = resolve(__dirname, 'i18n', ns);
+        const dirPath = resolve(__dirname, 'src', 'i18n', ns);
         if (!existsSync(dirPath)) {
           mkdirSync(dirPath);
         }
-
         const path = resolve(dirPath, `${lang}.json`);
         const content = JSON.stringify(currentLang[ns]);
 

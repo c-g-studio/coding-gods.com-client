@@ -1,34 +1,21 @@
 import { DevTools, Tolgee, FormatSimple } from '@tolgee/web';
+import { ALL_LANGUAGES, NAMESPACES } from '@/constants/constants';
 
 const apiKey = process.env.NEXT_PUBLIC_TOLGEE_API_KEY;
 const apiUrl = process.env.NEXT_PUBLIC_TOLGEE_API_URL;
 
-export async function getStaticData(
-  languages: string[],
-  namespaces: string[] = [''],
-) {
-  const result: Record<string, Record<string, string>> = {};
-  const promises: Promise<void>[] = []; // Массив для хранения промисов
-
+export async function getStaticData(languages: string[]) {
+  const result: Record<string, any> = {};
   for (const lang of languages) {
-    for (const namespace of namespaces) {
-      if (namespace) {
-        promises.push(
-          import(`../i18n/${lang}.json`).then(module => {
-            result[`${lang}:${namespace}`] = module.default;
-          }),
-        );
-      } else {
-        promises.push(
-          import(`../i18n/${lang}.json`).then(module => {
-            result[lang] = module.default;
-          }),
-        );
+    if (ALL_LANGUAGES.includes(lang)) {
+      for (const ns of NAMESPACES) {
+        result[lang] = {
+          ...result[lang],
+          [ns]: (await import(`../i18n/${ns}/${lang}.json`)).default,
+        };
       }
     }
   }
-
-  await Promise.all(promises);
 
   return result;
 }
