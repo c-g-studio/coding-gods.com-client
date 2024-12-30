@@ -1,8 +1,8 @@
 import React from 'react';
-import { LangSelector } from '@/components/shared/LangSelector/LangSelector';
-import { MenuButton } from '@/components/shared/Buttons/MenuButton/MenuButton';
-import { Logo } from '@/components/shared/Logo/Logo';
-import { GradientLine } from '@/components/shared/GradientLine/GradientLine';
+import { LangSelector } from '@/components/Shared/LangSelector/LangSelector';
+import { MenuButton } from '@/components/Shared/Buttons/MenuButton/MenuButton';
+import { Logo } from '@/components/Shared/Logo/Logo';
+import { GradientLine } from '@/components/Shared/GradientLine/GradientLine';
 
 export const Header = () => {
   return (

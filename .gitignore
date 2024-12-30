@@ -13,6 +13,7 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+/src/i18n
 
 # testing
 /coverage
