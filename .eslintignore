@@ -8,3 +8,4 @@ tailwind.config.ts
 !/.swc/
 /coverage
 updateLocales.js
+shared.ts
