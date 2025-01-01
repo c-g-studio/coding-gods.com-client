@@ -13,7 +13,6 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-/src/i18n
 
 # testing
 /coverage
@@ -28,6 +27,10 @@
 # misc
 .DS_Store
 *.pem
+
+# custom folders
+src/i18n/*
+!src/i18n/.gitkeep
 
 # debug
 npm-debug.log*
