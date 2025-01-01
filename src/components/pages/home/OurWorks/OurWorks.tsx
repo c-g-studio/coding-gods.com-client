@@ -2,7 +2,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 
 import { WorksGallery } from '@/components/pages/home/OurWorks/components/WorksGallery';
-import { Section } from '@/components/Shared/Section/Section';
+import { Section } from '@/components/shared/Section/Section';
 import { CustomLink } from '@/components/ui/CustomLink/CustomLink';
 import { Typography } from '@/components/ui/Typography/Typography';
 import { getTranslate } from '@/tolgee/server';

@@ -3,7 +3,7 @@ import { CustomLink } from '@/components/ui/CustomLink/CustomLink';
 import { Typography } from '@/components/ui/Typography/Typography';
 import { FC } from 'react';
 
-import { Section } from '@/components/Shared/Section/Section';
+import { Section } from '@/components/shared/Section/Section';
 import { getTranslate } from '@/tolgee/server';
 
 export const WeOffer: FC = async () => {

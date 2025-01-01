@@ -1,12 +1,12 @@
 import React from 'react';
-import { Input } from '@/components/Shared/FormElements/Input/Input';
-import { FooterList } from '@/components/Shared/FooterList/FooterList';
+import { Input } from '@/components/shared/FormElements/Input/Input';
+import { FooterList } from '@/components/shared/FooterList/FooterList';
 import { ALL_SOCIALS, SITEMAP_ITEMS } from '@/constants/constants';
-import { SubmitButton } from '@/components/Shared/Buttons/SubmitButton/SubmitButton';
+import { SubmitButton } from '@/components/shared/Buttons/SubmitButton/SubmitButton';
 import s from './Footer.module.css';
 import { getTranslate } from '@/tolgee/server';
-import { GradientLine } from '@/components/Shared/GradientLine/GradientLine';
-import { Logo } from '@/components/Shared/Logo/Logo';
+import { GradientLine } from '@/components/shared/GradientLine/GradientLine';
+import { Logo } from '@/components/shared/Logo/Logo';
 
 export const Footer = async () => {
   const t = await getTranslate();

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { TFooterList } from '@/components/Shared/FooterList/footerList.types';
+import { TFooterList } from '@/components/shared/FooterList/footerList.types';
 import { getTranslate } from '@/tolgee/server';
 
 export const FooterList: FC<TFooterList> = async ({ arr }) => {
