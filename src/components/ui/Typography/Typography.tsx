@@ -7,7 +7,6 @@ import { WithChildren, WithClassName } from '@/types/common';
 type Props = WithChildren &
   WithClassName & {
     variant?: 'h1' | 'h2' | 'h3' | 'p' | 'span';
-    className?: string;
   };
 
 export const Typography: FC = (
@@ -22,7 +21,7 @@ export const Typography: FC = (
         className,
         {
           'text-2xl font-medium md:text-5xl xl:text-[64px]': variant === 'h1',
-          'mb-6 text-2xl font-medium md:text-5xl xl:mb-12': variant === 'h2',
+          'mb-6 text-2xl font-medium md:text-5xl lg:mb-12': variant === 'h2',
           'text-base font-medium md:text-lg': variant === 'h3',
         },
       )}
