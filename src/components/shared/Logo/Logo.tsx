@@ -5,9 +5,9 @@ export type TLogoProps = {
   fontSize: string;
 };
 
-export const Logo: FC<TLogoProps> = ({ fontSize }) => {
+export const Logo: FC = ({ fontSize }) => {
   return (
-    <Link href="/" className={`text-accentColor ${fontSize} font-baloo`}>
+    <Link href="/" className={`text-orange-450 ${fontSize} font-baloo`}>
       CODING GODS
     </Link>
   );
