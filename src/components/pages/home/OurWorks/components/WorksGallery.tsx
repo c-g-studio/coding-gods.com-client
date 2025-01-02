@@ -4,7 +4,7 @@ import { classnames } from '@/utils/classnames';
 
 import { WithChildren, WithClassName } from '@/types/common';
 
-const Wrapper: FC = ({ children }) => {
+const Wrapper: FC<WithChildren> = ({ children }) => {
   return (
     <ul className="mb-6 gap-4 md:mb-10 md:grid md:grid-cols-6 md:grid-rows-2 xl:mb-8 xl:grid-cols-12">
       {children}
@@ -12,7 +12,7 @@ const Wrapper: FC = ({ children }) => {
   );
 };
 
-const Item: FC = ({ children, className }) => {
+const Item: FC<WithChildren & WithClassName> = ({ children, className }) => {
   return (
     <li
       className={classnames(

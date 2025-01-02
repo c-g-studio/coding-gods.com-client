@@ -3,11 +3,11 @@ import { WithChildren, WithClassName } from '@/types/common';
 import { classnames } from '@/utils/classnames';
 import React, { FC } from 'react';
 
-const Wrapper: FC = ({ children, className }) => {
+const Wrapper: FC<WithChildren & WithClassName> = ({ children, className }) => {
   return <ul className={classnames(className)}>{children}</ul>;
 };
 
-const Item: FC = ({ children, className }) => {
+const Item: FC<WithChildren & WithClassName>  = ({ children, className }) => {
   return (
     <ul
       className={classnames(
@@ -20,19 +20,19 @@ const Item: FC = ({ children, className }) => {
   );
 };
 
-const Header: FC = ({ children, className }) => {
+const Header: FC<WithChildren & WithClassName>  = ({ children, className }) => {
   return <div className={classnames(className)}>{children}</div>;
 };
 
-const Footer: FC = ({ children, className }) => {
+const Footer: FC<WithChildren & WithClassName>  = ({ children, className }) => {
   return <div className={classnames(className)}>{children}</div>;
 };
 
-const Body: FC = ({ children, className }) => {
+const Body: FC<WithChildren & WithClassName>  = ({ children, className }) => {
   return <div className={classnames(className)}>{children}</div>;
 };
 
-const Title: FC = ({ children, className }) => {
+const Title: FC<WithChildren & WithClassName>  = ({ children, className }) => {
   return (
     <Typography className={classnames(className)} variant="h3">
       {children}
