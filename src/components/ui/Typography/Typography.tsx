@@ -18,7 +18,7 @@ export const Typography: FC = (
   return (
     <Component
       className={classnames(
-        'font-inter text-xs font-normal text-gray-100 md:text-sm',
+        'font-inter text-xs font-normal text-zinc-200 md:text-sm',
         className,
         {
           'text-2xl font-medium md:text-5xl xl:text-[64px]': variant === 'h1',
