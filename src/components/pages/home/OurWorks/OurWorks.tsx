@@ -5,12 +5,14 @@ import { WorksGallery } from '@/components/pages/home/OurWorks/components/WorksG
 import { Section } from '@/components/shared/Section/Section';
 import { CustomLink } from '@/components/ui/CustomLink/CustomLink';
 import { Typography } from '@/components/ui/Typography/Typography';
+import { getTranslate } from '@/tolgee/server';
 
-export const OurWorks: FC = () => {
+export const OurWorks: FC = async () => {
+  const t = await getTranslate();
   return (
     <Section className="text-center">
       <Typography variant="h2" className="mb-6 xl:mb-12">
-        Наші роботи
+        {t('home.sectionOurProjects.title')}
       </Typography>
 
       <WorksGallery.Wrapper>
@@ -65,7 +67,7 @@ export const OurWorks: FC = () => {
         </WorksGallery.Item>
       </WorksGallery.Wrapper>
 
-      <CustomLink href="/about">Більше</CustomLink>
+      <CustomLink href="/about">{t('home.common.moreBtn')}</CustomLink>
     </Section>
   );
 };

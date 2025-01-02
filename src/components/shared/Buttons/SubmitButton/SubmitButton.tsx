@@ -1,12 +1,17 @@
 import React, { FC } from 'react';
 import { TSubmitButton } from '@/components/shared/Buttons/SubmitButton/submitButton.types';
+import { getTranslate } from '@/tolgee/server';
 
-export const SubmitButton: FC<TSubmitButton> = ({ height, textTransform }) => {
+export const SubmitButton: FC<TSubmitButton> = async ({
+  height,
+  textTransform,
+}) => {
+  const t = await getTranslate();
   return (
     <button
       className={`${height} ${textTransform} w-full rounded-3xl bg-accentColor text-black md:w-[282px]`}
     >
-      Залишити заявку
+      {t('home.common.submitBtn')}
     </button>
   );
 };

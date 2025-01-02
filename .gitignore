@@ -28,6 +28,10 @@
 .DS_Store
 *.pem
 
+# custom folders
+src/i18n/*
+!src/i18n/.gitkeep
+
 # debug
 npm-debug.log*
 yarn-debug.log*
