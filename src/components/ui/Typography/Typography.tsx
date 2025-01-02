@@ -10,18 +10,15 @@ type Props = WithChildren &
     className?: string;
   };
 
-export const Typography: FC<Props> = ({
-  variant,
-  children,
-  className = '',
-  ...props
-}: Props) => {
+export const Typography: FC = (
+  { variant, children, className = '', ...props }: Props,
+) => {
   const Component = variant ?? 'p';
 
   return (
     <Component
       className={classnames(
-        'font-inter text-xs font-normal text-gray-800 md:text-sm dark:text-gray-100',
+        'font-inter text-xs font-normal text-gray-100 md:text-sm',
         className,
         {
           'text-2xl font-medium md:text-5xl xl:text-[64px]': variant === 'h1',
