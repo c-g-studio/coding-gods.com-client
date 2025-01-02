@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { TSubmitButton } from '@/components/shared/Buttons/SubmitButton/submitButton.types';
 import { getTranslate } from '@/tolgee/server';
 
-export const SubmitButton: FC = async ({ height, textTransform }) => {
+export const SubmitButton: FC<TSubmitButton> = async ({ height, textTransform }) => {
   const t = await getTranslate();
   return (
     <button

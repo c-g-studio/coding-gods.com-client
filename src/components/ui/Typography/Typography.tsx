@@ -9,7 +9,7 @@ type Props = WithChildren &
     variant?: 'h1' | 'h2' | 'h3' | 'p' | 'span';
   };
 
-export const Typography: FC = (
+export const Typography: FC<Props> = (
   { variant, children, className = '', ...props }: Props,
 ) => {
   const Component = variant ?? 'p';

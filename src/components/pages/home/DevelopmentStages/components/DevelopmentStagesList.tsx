@@ -5,6 +5,9 @@ import { Typography } from '@/components/ui/Typography/Typography';
 import { classnames } from '@/utils/classnames';
 
 import data from '@/components/pages/home/DevelopmentStages/data.json';
+import {IconConfig} from "@/components/ui/Icon/Icon.config";
+
+type StageType = keyof typeof IconConfig;
 
 export const DevelopmentStagesList: FC = () => {
   return (
@@ -24,7 +27,7 @@ export const DevelopmentStagesList: FC = () => {
           )}
         >
           <div className="border-r-[1.3px] py-3.5 pr-5">
-            <Icon type={stage.type} width={49} height={49} />
+            <Icon type={stage.type as StageType} width={49} height={49} />
           </div>
 
           <div className="space-y-2">

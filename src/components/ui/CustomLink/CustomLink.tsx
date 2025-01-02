@@ -12,7 +12,7 @@ type Props = WithChildren &
     href: LinkProps['href'];
   };
 
-export const CustomLink: FC = ({ children, className, href }) => {
+export const CustomLink: FC<Props>= ({ children, className, href }) => {
   return (
     <Link
       className={classnames(
