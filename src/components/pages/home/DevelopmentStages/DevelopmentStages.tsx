@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import Image from 'next/image';
 
 import { DevelopmentChart } from '@/components/pages/home/DevelopmentStages/components/DevelopmentChart/DevelopmentChart';
 import { DevelopmentStagesList } from '@/components/pages/home/DevelopmentStages/components/DevelopmentStagesList';
@@ -15,12 +16,19 @@ export const DevelopmentStages: FC = () => {
         Етапи розробки
       </Typography>
 
-      <div className="relative flex items-center gap-x-[262px]">
+      <div className="relative mx-auto flex w-[1134px] items-center gap-x-[262px]">
         {/*List of development stages*/}
         <DevelopmentStagesList />
 
         {/*Decor*/}
-        <div></div>
+
+        <Image
+          width={383}
+          height={588}
+          className="motion-preset-blur-right absolute right-24 top-7 motion-delay-75"
+          src="/numeric-decor.svg"
+          alt="Numeric decor"
+        />
 
         {/*Chart*/}
         <DevelopmentChart />
