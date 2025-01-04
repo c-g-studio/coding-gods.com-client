@@ -19,10 +19,26 @@ export const WeOffer: FC = async () => {
           </Card.Header>
 
           <Card.Body className="space-y-1.5 text-left">
-            <Typography>{t('home.sectionWeOffer.branding.liOne')}</Typography>
-            <Typography>{t('home.sectionWeOffer.branding.liTwo')}</Typography>
-            <Typography>{t('home.sectionWeOffer.branding.liThree')}</Typography>
-            <Typography>{t('home.sectionWeOffer.branding.liFour')}</Typography>
+            <Typography
+              className={`relative pl-3 before:absolute before:left-1 before:top-2 before:h-1 before:w-1 before:rounded-[50%] before:bg-zinc-200 before:content-['']`}
+            >
+              {t('home.sectionWeOffer.branding.liOne')}
+            </Typography>
+            <Typography
+              className={`relative pl-3 before:absolute before:left-1 before:top-2 before:h-1 before:w-1 before:rounded-[50%] before:bg-zinc-200 before:content-['']`}
+            >
+              {t('home.sectionWeOffer.branding.liTwo')}
+            </Typography>
+            <Typography
+              className={`relative pl-3 before:absolute before:left-1 before:top-2 before:h-1 before:w-1 before:rounded-[50%] before:bg-zinc-200 before:content-['']`}
+            >
+              {t('home.sectionWeOffer.branding.liThree')}
+            </Typography>
+            <Typography
+              className={`relative pl-3 before:absolute before:left-1 before:top-2 before:h-1 before:w-1 before:rounded-[50%] before:bg-zinc-200 before:content-['']`}
+            >
+              {t('home.sectionWeOffer.branding.liFour')}
+            </Typography>
           </Card.Body>
 
           <Card.Footer>
@@ -36,12 +52,26 @@ export const WeOffer: FC = async () => {
           </Card.Header>
 
           <Card.Body className="space-y-1.5 text-left">
-            <Typography>{t('home.sectionWeOffer.webDesign.liOne')}</Typography>
-            <Typography>{t('home.sectionWeOffer.webDesign.liTwo')}</Typography>
-            <Typography>
+            <Typography
+              className={`relative pl-3 before:absolute before:left-1 before:top-2 before:h-1 before:w-1 before:rounded-[50%] before:bg-zinc-200 before:content-['']`}
+            >
+              {t('home.sectionWeOffer.webDesign.liOne')}
+            </Typography>
+            <Typography
+              className={`relative pl-3 before:absolute before:left-1 before:top-2 before:h-1 before:w-1 before:rounded-[50%] before:bg-zinc-200 before:content-['']`}
+            >
+              {t('home.sectionWeOffer.webDesign.liTwo')}
+            </Typography>
+            <Typography
+              className={`relative pl-3 before:absolute before:left-1 before:top-2 before:h-1 before:w-1 before:rounded-[50%] before:bg-zinc-200 before:content-['']`}
+            >
               {t('home.sectionWeOffer.webDesign.liThree')}
             </Typography>
-            <Typography>{t('home.sectionWeOffer.webDesign.liFour')}</Typography>
+            <Typography
+              className={`relative pl-3 before:absolute before:left-1 before:top-2 before:h-1 before:w-1 before:rounded-[50%] before:bg-zinc-200 before:content-['']`}
+            >
+              {t('home.sectionWeOffer.webDesign.liFour')}
+            </Typography>
           </Card.Body>
 
           <Card.Footer>
@@ -55,10 +85,26 @@ export const WeOffer: FC = async () => {
           </Card.Header>
 
           <Card.Body className="space-y-1.5 text-left">
-            <Typography>{t('home.sectionWeOffer.dev.liOne')}</Typography>
-            <Typography>{t('home.sectionWeOffer.dev.liTwo')}</Typography>
-            <Typography>{t('home.sectionWeOffer.dev.liThree')}</Typography>
-            <Typography>{t('home.sectionWeOffer.dev.liFour')}</Typography>
+            <Typography
+              className={`relative pl-3 before:absolute before:left-1 before:top-2 before:h-1 before:w-1 before:rounded-[50%] before:bg-zinc-200 before:content-['']`}
+            >
+              {t('home.sectionWeOffer.dev.liOne')}
+            </Typography>
+            <Typography
+              className={`relative pl-3 before:absolute before:left-1 before:top-2 before:h-1 before:w-1 before:rounded-[50%] before:bg-zinc-200 before:content-['']`}
+            >
+              {t('home.sectionWeOffer.dev.liTwo')}
+            </Typography>
+            <Typography
+              className={`relative pl-3 before:absolute before:left-1 before:top-2 before:h-1 before:w-1 before:rounded-[50%] before:bg-zinc-200 before:content-['']`}
+            >
+              {t('home.sectionWeOffer.dev.liThree')}
+            </Typography>
+            <Typography
+              className={`relative pl-3 before:absolute before:left-1 before:top-2 before:h-1 before:w-1 before:rounded-[50%] before:bg-zinc-200 before:content-['']`}
+            >
+              {t('home.sectionWeOffer.dev.liFour')}
+            </Typography>
           </Card.Body>
 
           <Card.Footer>
@@ -72,10 +118,26 @@ export const WeOffer: FC = async () => {
           </Card.Header>
 
           <Card.Body className="space-y-1.5 text-left">
-            <Typography>{t('home.sectionWeOffer.SEO.liOne')}</Typography>
-            <Typography>{t('home.sectionWeOffer.SEO.liTwo')}</Typography>
-            <Typography>{t('home.sectionWeOffer.SEO.liThree')}</Typography>
-            <Typography>{t('home.sectionWeOffer.SEO.liFour')}</Typography>
+            <Typography
+              className={`relative pl-3 before:absolute before:left-1 before:top-2 before:h-1 before:w-1 before:rounded-[50%] before:bg-zinc-200 before:content-['']`}
+            >
+              {t('home.sectionWeOffer.SEO.liOne')}
+            </Typography>
+            <Typography
+              className={`relative pl-3 before:absolute before:left-1 before:top-2 before:h-1 before:w-1 before:rounded-[50%] before:bg-zinc-200 before:content-['']`}
+            >
+              {t('home.sectionWeOffer.SEO.liTwo')}
+            </Typography>
+            <Typography
+              className={`relative pl-3 before:absolute before:left-1 before:top-2 before:h-1 before:w-1 before:rounded-[50%] before:bg-zinc-200 before:content-['']`}
+            >
+              {t('home.sectionWeOffer.SEO.liThree')}
+            </Typography>
+            <Typography
+              className={`relative pl-3 before:absolute before:left-1 before:top-2 before:h-1 before:w-1 before:rounded-[50%] before:bg-zinc-200 before:content-['']`}
+            >
+              {t('home.sectionWeOffer.SEO.liFour')}
+            </Typography>
           </Card.Body>
 
           <Card.Footer>
