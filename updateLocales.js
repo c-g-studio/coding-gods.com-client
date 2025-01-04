@@ -78,8 +78,8 @@ updateLocales()
 
 function writeLocales(translations) {
   try {
-    if (!existsSync(resolve(__dirname, "src", 'i18n'))) {
-      mkdirSync(resolve(__dirname,"src" ,'i18n'));
+    if (!existsSync(resolve(__dirname, 'src', 'i18n'))) {
+      mkdirSync(resolve(__dirname, 'src', 'i18n'));
     }
     for (let lang in translations) {
       const currentLang = translations[lang];

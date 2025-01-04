@@ -12,7 +12,7 @@ export const WeOffer: FC = async () => {
     <Section className="text-center">
       <Typography variant="h2">Ми пропонуємо</Typography>
 
-      <Cards.Wrapper className="mx-auto grid max-w-[1082px] gap-3.5 md:grid-cols-2 lg:grid-cols-4">
+      <Cards.Wrapper className="mx-auto grid max-w-[220px] grid-cols-1 gap-3.5 self-stretch md:max-w-[536px] md:grid-cols-2 lg:max-w-[1082px] lg:grid-cols-4">
         <Card.Item className="space-y-10">
           <Card.Header>
             <Card.Title>{t('home.sectionWeOffer.branding.title')}</Card.Title>
