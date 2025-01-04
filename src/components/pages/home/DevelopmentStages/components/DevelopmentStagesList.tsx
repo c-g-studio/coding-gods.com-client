@@ -5,7 +5,7 @@ import { Typography } from '@/components/ui/Typography/Typography';
 import { classnames } from '@/utils/classnames';
 
 import data from '@/components/pages/home/DevelopmentStages/data.json';
-import {IconConfig} from "@/components/ui/Icon/Icon.config";
+import { IconConfig } from '@/components/ui/Icon/Icon.config';
 
 type StageType = keyof typeof IconConfig;
 
