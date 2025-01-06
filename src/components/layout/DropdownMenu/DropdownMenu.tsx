@@ -23,7 +23,7 @@ export const DropdownMenu = async () => {
               }
             />
             <Link
-              className="inline-flex h-full w-full items-center justify-center uppercase"
+              className="inline-flex h-full w-full items-center justify-center uppercase group-hover:bg-[linear-gradient(132deg,rgba(155,155,155,0.20)7.71%,rgba(0,0,0,0.00)71.33%)]"
               href={`/${item.href}`}
             >
               {t(item.key)}
