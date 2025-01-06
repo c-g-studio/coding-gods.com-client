@@ -12,7 +12,7 @@ export const Header = () => {
         <Logo fontSize={'text-base md:text-2xl'} />
         <MenuButton />
       </div>
-      <GradientLine positionY={'bottom'} />
+      <GradientLine positionY={'bottom'} width={'w-full'} left={'left-0'} />
     </header>
   );
 };

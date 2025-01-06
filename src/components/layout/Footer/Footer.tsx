@@ -14,7 +14,7 @@ export const Footer = async () => {
     <footer
       className={`${s.footer} lg:pb-[41px]} relative pb-[51px] pt-11 md:pb-[27px]`}
     >
-      <GradientLine positionY={'top-0'} />
+      <GradientLine positionY={'top-0'} width={'w-full'} left={'left-0'} />
 
       <div className="container flex flex-col">
         <div className="mb-[43px] flex flex-col flex-wrap justify-between gap-y-16 md:mb-[74px] md:flex-row md:gap-x-20 lg:mb-[58px]">

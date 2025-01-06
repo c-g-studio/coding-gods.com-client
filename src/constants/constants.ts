@@ -36,3 +36,11 @@ export const SITEMAP_ITEMS = [
   'footer.sectionFooter.sitemap.liFour',
   'footer.sectionFooter.sitemap.liFive',
 ];
+
+export const NAVIGATIONS = [
+  { href: '#', key: 'header.sectionHeader.menu.liOne' },
+  { href: '#', key: 'header.sectionHeader.menu.liTwo' },
+  { href: '#', key: 'header.sectionHeader.menu.liThree' },
+  { href: '#', key: 'header.sectionHeader.menu.liFour' },
+  { href: '#', key: 'header.sectionHeader.menu.liFive' },
+];
