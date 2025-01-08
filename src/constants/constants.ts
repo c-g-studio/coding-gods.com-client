@@ -1,4 +1,8 @@
-export const ALL_LANGUAGES = ['en', 'ua', 'ru'];
+export const ALL_LANGUAGES = [
+  { key: 'en', value: 'English ' },
+  { key: 'ua', value: 'Українська ' },
+  { key: 'ru', value: 'Русский ' },
+];
 export const DEFAULT_LANGUAGE = 'en';
 
 export const HOME_NS = 'home';
@@ -38,9 +42,9 @@ export const SITEMAP_ITEMS = [
 ];
 
 export const NAVIGATIONS = [
-  { href: '#', key: 'header.sectionHeader.menu.liOne' },
-  { href: '#', key: 'header.sectionHeader.menu.liTwo' },
+  { href: 'about', key: 'header.sectionHeader.menu.liOne' },
+  { href: 'portfolio', key: 'header.sectionHeader.menu.liTwo' },
   { href: '#', key: 'header.sectionHeader.menu.liThree' },
-  { href: '#', key: 'header.sectionHeader.menu.liFour' },
+  { href: 'contacts', key: 'header.sectionHeader.menu.liFour' },
   { href: '#', key: 'header.sectionHeader.menu.liFive' },
 ];

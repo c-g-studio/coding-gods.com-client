@@ -6,11 +6,16 @@ const apiUrl = process.env.NEXT_PUBLIC_TOLGEE_API_URL;
 
 export async function getStaticData(languages: string[]) {
   const result: Record<string, any> = {};
+
   for (const lang of languages) {
-    if (ALL_LANGUAGES.includes(lang)) {
+    // Проверяем, существует ли язык в массиве ALL_LANGUAGES по ключу
+    const language = ALL_LANGUAGES.find(item => item.key === lang);
+
+    if (language) {
+      // Загружаем переводы для каждого namespace
       for (const ns of NAMESPACES) {
         result[lang] = {
-          ...result[lang],
+          ...result[lang], // Сохраняем уже загруженные данные, если они есть
           [ns]: (await import(`../i18n/${ns}/${lang}.json`)).default,
         };
       }

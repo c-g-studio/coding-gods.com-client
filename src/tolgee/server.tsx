@@ -6,16 +6,18 @@ import { ALL_LANGUAGES } from '@/constants/constants';
 
 export const { getTolgee, getTranslate, T } = createServerInstance({
   getLocale: getLanguage,
-  createTolgee: async locale =>
-    TolgeeBase().init({
-      // including all locales
-      // on server we are not concerned about bundle size
-      staticData: await getStaticData(ALL_LANGUAGES),
+  createTolgee: async locale => {
+    const languages = ALL_LANGUAGES.map(item => item.key);
+    const staticData = await getStaticData(languages);
+
+    return TolgeeBase().init({
+      staticData, // передаем переводы
       observerOptions: {
         fullKeyEncode: true,
       },
       language: locale,
       fetch: async (input, init) =>
         fetch(input, { ...init, next: { revalidate: 0 } }),
-    }),
+    });
+  },
 });

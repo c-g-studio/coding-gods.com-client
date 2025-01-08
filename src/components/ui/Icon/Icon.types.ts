@@ -5,4 +5,5 @@ type IconType = keyof typeof IconConfig;
 
 export interface TIconComponentProps extends TIconProps {
   type: IconType;
+  className?: string;
 }

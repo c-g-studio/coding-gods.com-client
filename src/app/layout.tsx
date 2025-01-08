@@ -10,7 +10,7 @@ import { baloo, bungee, interMedium, interRegular, roboto } from '@/app/fonts';
 
 import { WithChildren } from '@/types/common';
 
-export default async function LocaleLayout({ children, menu }: WithChildren) {
+export default async function LocaleLayout({ children }: WithChildren) {
   const locale = await getLanguage();
   const staticData = await getStaticData([locale]);
   const t = await getTranslate();
@@ -22,7 +22,6 @@ export default async function LocaleLayout({ children, menu }: WithChildren) {
       <body>
         <TolgeeNextProvider language={locale} staticData={staticData}>
           <Header />
-          {menu}
           <nav className={'flex justify-center gap-4'}>
             <Link href={'/about'}>{t('aboutPage')}</Link>
             <Link href={'/portfolio'}>{t('contactsPage')}</Link>

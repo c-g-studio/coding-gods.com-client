@@ -4,7 +4,12 @@ import { IconConfig } from '@/components/ui/Icon/Icon.config';
 
 import { TIconComponentProps } from '@/components/ui/Icon/Icon.types';
 
-export const Icon: FC<TIconComponentProps> = ({ type, width, height }) => {
+export const Icon: FC<TIconComponentProps> = ({
+  type,
+  width,
+  height,
+  className,
+}) => {
   const icon = IconConfig[type];
 
   if (!icon) return null;
@@ -16,6 +21,7 @@ export const Icon: FC<TIconComponentProps> = ({ type, width, height }) => {
       height={height}
       viewBox={`0 0 ${width} ${height}`}
       fill="none"
+      className={className}
     >
       {icon}
     </svg>
