@@ -10,7 +10,7 @@ export const OurAdvantages = async () => {
 
   return (
     <Section className="relative text-center">
-      <GradientLine positionY={'top-0'} />
+      <GradientLine positionY={'top-0'} width={'w-full'} left={'left-0'} />
       <Typography variant="h2" className={'md:mb-12'}>
         {t('home.sectionOurAdvantages.title')}
       </Typography>

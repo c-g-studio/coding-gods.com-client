@@ -6,7 +6,7 @@ import { GradientLine } from '@/components/shared/GradientLine/GradientLine';
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 w-full bg-[rgba(10,10,10,0.7)] backdrop-blur-[27px] md:fixed">
+    <header className="sticky top-0 z-50 w-full bg-[rgba(10,10,10,0.7)] backdrop-blur-[27px] md:fixed">
       <div className="container flex items-center justify-between py-8">
         <LangSelector />
         <Logo fontSize={'text-base md:text-2xl'} />
