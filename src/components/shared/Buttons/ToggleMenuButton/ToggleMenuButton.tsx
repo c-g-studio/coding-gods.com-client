@@ -4,7 +4,7 @@ import { Menu, MenuButton, MenuItems } from '@headlessui/react';
 import { NAVIGATIONS } from '@/constants/constants';
 import { GradientLine } from '@/components/shared/GradientLine/GradientLine';
 import Link from 'next/link';
-import React, { FC, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import clsx from 'clsx';
 import { useTranslate } from '@tolgee/react';
 
