@@ -9,7 +9,7 @@ export const SubmitButton: FC<TSubmitButton> = async ({
   const t = await getTranslate();
   return (
     <button
-      className={`${height} ${textTransform} w-full rounded-3xl bg-accentColor text-black md:w-[282px]`}
+      className={`${height} ${textTransform} w-full rounded-3xl bg-orange-450 text-black md:w-[282px]`}
     >
       {t('home.common.submitBtn')}
     </button>

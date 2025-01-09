@@ -25,11 +25,11 @@ export default {
         '2xl': '1440px',
       },
       colors: {
-        accentColor: '#FFAC0C',
-        btnText: '#0A0A0A',
-        btnAccentHover: '#FBA600',
-        btnNotActive: '#CDCDCD',
-        cardBorder: '#D9D9D9',
+        'orange-450': '#FFAC0C',
+        'orange-400': '#FBA600',
+        'zinc-950': '#0A0A0A',
+        'zinc-200': '#D9D9D9',
+        'zinc-300': '#CDCDCD',
         background: 'var(--background)',
         foreground: 'var(--foreground)',
       },
@@ -41,5 +41,5 @@ export default {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'), require('tailwindcss-motion')],
 } satisfies Config;

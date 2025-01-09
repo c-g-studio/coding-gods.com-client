@@ -55,10 +55,10 @@ export const Footer = async () => {
             <SubmitButton height={'h-10'} textTransform={'normal-case'} />
           </form>
         </div>
-        <span className="absolute top-[665.72] z-10 font-bungee text-[34.54px] text-accentColor opacity-10 md:top-[310.71px] md:text-[84.311px] lg:top-[198px] lg:text-[128px] xl:top-[160px] xl:text-[160px]">
+        <span className="absolute top-[665.72] z-10 font-bungee text-[34.54px] text-orange-450 opacity-10 md:top-[310.71px] md:text-[84.311px] lg:top-[198px] lg:text-[128px] xl:top-[160px] xl:text-[160px]">
           CODING GODS
         </span>
-        <div className="h-[1px] w-full bg-accentColor"></div>
+        <div className="h-[1px] w-full bg-orange-450"></div>
         <p className="mt-[45px] self-center md:mt-[43px]">
           {t('footer.sectionFooter.rights')} @Coding Gods 2024
         </p>
