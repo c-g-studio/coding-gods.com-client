@@ -46,7 +46,10 @@ export const WeOffer: NextPage = async () => {
 
             <Card.Body className="space-y-1.5 text-left">
               {Array.from({ length: 4 }).map((_, index) => (
-                <Typography key={index} className={listItemDecorClassName}>
+                <Typography
+                  key={`${translateKeys[index]}`}
+                  className={listItemDecorClassName}
+                >
                   {t(`home.sectionWeOffer.${key}.li${translateKeys[index]}`)}
                 </Typography>
               ))}
