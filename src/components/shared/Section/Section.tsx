@@ -1,14 +1,14 @@
-import { classnames } from '@/utils/classnames';
 import React, { FC } from 'react';
 
-import { WithChildren, WithClassName } from '@/types/common';
+import { classnames } from '@/utils/classnames';
 
-export const Section: FC<WithChildren & WithClassName> = ({
+export const Section: FC<React.HTMLProps<HTMLDivElement>> = ({
   className,
   children,
+  ...props
 }) => {
   return (
-    <section className={classnames('py-16 md:py-20', className)}>
+    <section className={classnames('py-16 md:py-20', className)} {...props}>
       <div className="container">{children}</div>
     </section>
   );

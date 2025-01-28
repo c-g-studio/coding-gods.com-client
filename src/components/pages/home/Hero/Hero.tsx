@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
+import Image from 'next/image';
 
 import { Section } from '@/components/shared/Section/Section';
 import { Typography } from '@/components/ui/Typography/Typography';
 import { SocialLinks } from './components/SocialLinks';
-import { LeaveRequest } from './components/LeaveRequest';
-import Image from 'next/image';
+import Link from 'next/link';
 
 export const Hero: FC = () => {
   return (
@@ -23,7 +23,9 @@ export const Hero: FC = () => {
             Ми створюємо, ви вражаєте
           </Typography>
 
-          <LeaveRequest />
+          <Link className="defaultButton inline-flex" href="#form">
+            Залишити заявку
+          </Link>
         </div>
       </div>
 
@@ -31,7 +33,9 @@ export const Hero: FC = () => {
         src="/images/hero/banner.jpeg"
         alt="Banner"
         className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
-        layout="fill"
+        width={1920}
+        height={1080}
+        priority
       />
     </Section>
   );
