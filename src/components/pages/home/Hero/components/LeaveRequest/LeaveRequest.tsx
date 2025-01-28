@@ -17,10 +17,7 @@ export const LeaveRequest: FC = () => {
 
   return (
     <>
-      <Button
-        onClick={open}
-        className="rounded-full bg-orange-450 px-6 py-2.5 text-base font-medium uppercase text-zinc-950 transition-colors duration-200 focus:outline-none data-[hover]:bg-orange-450/90 data-[focus]:outline-1 data-[focus]:outline-white"
-      >
+      <Button onClick={open} className="defaultButton">
         Залишити заявку
       </Button>
 
