@@ -1,8 +1,8 @@
 'use client';
 
-import React, { FC, useActionState } from 'react';
-import { useFormStatus } from 'react-dom';
-import Form from 'next/form';
+import React, { FC } from 'react';
+import { useForm, SubmitHandler, Controller } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 import {
   Button,
@@ -16,15 +16,12 @@ import {
 import { classnames } from '@/utils/classnames';
 import { Typography } from '@/components/ui/Typography/Typography';
 
-import { BaseFormProps, BaseFormInitialProps } from './BaseForm.types';
+import { BaseFormInputProps, BaseFormProps } from './BaseForm.types';
 
-const initialState: BaseFormInitialProps = {
-  success: '',
-  errors: {
-    name: '',
-    email: '',
-    phone: '',
-  },
+const defaultValues = {
+  name: '',
+  email: '',
+  phone: '',
 };
 
 export const BaseForm: FC<BaseFormProps> = ({
@@ -33,14 +30,31 @@ export const BaseForm: FC<BaseFormProps> = ({
   btnText,
   legend,
   fields,
+  schema,
   handler,
 }) => {
-  const [state, formAction, pending] = useActionState(handler, initialState);
+  const {
+    handleSubmit,
+    control,
+    formState: { isSubmitting, errors },
+    reset,
+  } = useForm<BaseFormInputProps>({
+    defaultValues,
+    mode: 'onChange',
+    resolver: zodResolver(schema),
+  });
 
-  console.log('state', state);
+  const onSubmit: SubmitHandler<BaseFormInputProps> = data => {
+    try {
+      handler(data);
+      reset();
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
 
   return (
-    <Form action={formAction} className={classnames(className)}>
+    <form className={classnames(className)} onSubmit={handleSubmit(onSubmit)}>
       <Fieldset className="space-y-4">
         <Legend className="text-center text-sm font-normal uppercase md:text-left">
           {legend}
@@ -52,30 +66,36 @@ export const BaseForm: FC<BaseFormProps> = ({
           </Typography>
         )}
 
-        {fields.map(field => (
-          <Field key={field.id} className="relative">
-            <Label htmlFor={field.id}>
+        {fields.map(item => (
+          <Field key={item.id} className="relative">
+            <Label htmlFor={item.id}>
               <Typography variant="span" className="sr-only">
-                {field.placeholder}
+                {item.placeholder}
               </Typography>
             </Label>
 
-            <Input
-              id={field.id}
-              name={field.id}
-              type={field.type}
-              placeholder={field.placeholder}
-              className={classnames('defaultInput', {
-                'border-rose-500': state.errors[field.id],
-              })}
+            <Controller
+              name={item.id}
+              control={control}
+              render={({ field }) => (
+                <Input
+                  {...field}
+                  id={item.id}
+                  type={item.type}
+                  placeholder={item.placeholder}
+                  className={classnames('defaultInput w-full', {
+                    'border-rose-500': errors[item.id],
+                  })}
+                />
+              )}
             />
 
-            {state.errors[field.id] && (
+            {errors[item.id] && (
               <Typography
                 variant="span"
                 className="absolute -bottom-4 left-4 text-[10px] text-rose-500 md:text-[10px]"
               >
-                {state.errors[field.id]}
+                {errors[item.id]?.message}
               </Typography>
             )}
           </Field>
@@ -84,11 +104,11 @@ export const BaseForm: FC<BaseFormProps> = ({
         <Button
           type="submit"
           className="defaultButton w-full"
-          disabled={pending}
+          disabled={isSubmitting}
         >
           {btnText}
         </Button>
       </Fieldset>
-    </Form>
+    </form>
   );
 };

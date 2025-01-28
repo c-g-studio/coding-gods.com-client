@@ -1,25 +1,25 @@
-import { FormProps } from 'next/form';
+import { ComponentPropsWithRef } from 'react';
+import { z } from 'zod';
+import { SubmitHandler } from 'react-hook-form';
 
-export type BaseFormInitialProps = {
-  success: string;
-  errors: {
-    name: string;
-    email: string;
-    phone: string;
-  };
+export type BaseFormInputProps = {
+  name: string;
+  email: string;
+  phone: string;
 };
 
 export type FieldProps = {
   label: string;
-  id: keyof BaseFormInitialProps['errors'];
+  id: 'name' | 'email' | 'phone';
   type: string;
   placeholder: string;
 };
 
-export type BaseFormProps = FormProps & {
+export type BaseFormProps = ComponentPropsWithRef<'form'> & {
   fields: FieldProps[];
   legend: string;
   description?: string;
   btnText: string;
-  handler: () => Promise<BaseFormInitialProps>;
+  schema: z.ZodObject<z.ZodRawShape>;
+  handler: SubmitHandler<BaseFormInputProps>;
 };
