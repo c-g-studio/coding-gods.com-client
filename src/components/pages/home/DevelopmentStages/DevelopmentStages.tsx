@@ -16,7 +16,7 @@ export const DevelopmentStages: FC = () => {
         Етапи розробки
       </Typography>
 
-      <div className="relative mx-auto flex w-[1134px] items-center gap-x-[262px]">
+      <div className="relative mx-auto hidden w-[1134px] items-center gap-x-[262px] xl:flex">
         {/*List of development stages*/}
         <DevelopmentStagesList />
 

@@ -4,10 +4,12 @@ import { DevelopmentStages } from '@/components/pages/home/DevelopmentStages';
 import { OurWorks } from '@/components/pages/home/OurWorks/OurWorks';
 import { WeOffer } from '@/components/pages/home/WeOffer/WeOffer';
 import { OurAdvantages } from '@/components/pages/home/OurAdvantages/OurAdvantages';
+import { AboutUs } from '@/components/pages/home/AboutUs/AboutUs';
 
 export default async function Home() {
   return (
     <>
+      <AboutUs />
       <WeOffer />
       <OurWorks />
       <DevelopmentStages />
