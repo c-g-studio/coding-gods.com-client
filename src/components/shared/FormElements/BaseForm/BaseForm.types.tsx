@@ -1,3 +1,5 @@
+import { FormProps } from 'next/form';
+
 export type FieldProps = {
   label: string;
   id: string;
@@ -5,7 +7,7 @@ export type FieldProps = {
   placeholder: string;
 };
 
-export type BaseFormProps = React.HTMLProps<HTMLFormElement> & {
+export type BaseFormProps = FormProps & {
   fields: FieldProps[];
   legend: string;
   description?: string;

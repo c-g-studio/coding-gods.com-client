@@ -6,6 +6,18 @@ import { getTranslate } from '@/tolgee/server';
 import { Section } from '@/components/shared/Section/Section';
 import { BaseForm } from '@/components/shared/FormElements/BaseForm';
 
+async function handleFormAction(formData: FormData) {
+  'use server';
+
+  const data = {
+    name: formData.get('name') as string,
+    email: formData.get('email') as string,
+    phone: formData.get('phone') as string,
+  };
+
+  console.info(data);
+}
+
 export const Form = async () => {
   const t = await getTranslate();
 
@@ -13,7 +25,8 @@ export const Form = async () => {
     <Section id="form">
       <div className="grid gap-10 lg:grid-cols-[519px_1fr] lg:gap-[160px]">
         <BaseForm
-          className=""
+          action={handleFormAction}
+          formMethod="POST"
           legend={t('home.sectionFeedback.title')}
           fields={[
             {

@@ -1,4 +1,6 @@
 import React, { FC } from 'react';
+import Form from 'next/form';
+
 import {
   Button,
   Field,
@@ -22,7 +24,7 @@ export const BaseForm: FC<BaseFormProps> = ({
   ...props
 }) => {
   return (
-    <form className={classnames(className)} {...props}>
+    <Form className={classnames(className)} {...props}>
       <Fieldset className="space-y-4">
         <Legend className="text-center text-sm font-normal uppercase md:text-left">
           {legend}
@@ -44,6 +46,7 @@ export const BaseForm: FC<BaseFormProps> = ({
 
             <Input
               id={field.id}
+              name={field.id}
               type={field.type}
               placeholder={field.placeholder}
               className="defaultInput"
@@ -51,8 +54,10 @@ export const BaseForm: FC<BaseFormProps> = ({
           </Field>
         ))}
 
-        <Button className="defaultButton w-full">{btnText}</Button>
+        <Button type="submit" className="defaultButton w-full">
+          {btnText}
+        </Button>
       </Fieldset>
-    </form>
+    </Form>
   );
 };
