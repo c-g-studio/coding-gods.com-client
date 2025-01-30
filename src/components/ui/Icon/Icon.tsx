@@ -20,7 +20,6 @@ export const Icon: FC<TIconComponentProps> = ({
       width={width}
       height={height}
       viewBox={`0 0 ${width} ${height}`}
-      fill="none"
       className={className}
     >
       {icon}

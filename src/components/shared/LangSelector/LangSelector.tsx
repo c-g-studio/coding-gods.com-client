@@ -41,18 +41,28 @@ export const LangSelector: React.FC = () => {
               <div className="relative">
                 <ListboxButton
                   className={clsx(
-                    'block cursor-pointer appearance-none border-none bg-background bg-none p-0 pr-8 font-roboto uppercase text-foreground',
-                    open && 'bg-opacity-50',
+                    'block cursor-pointer appearance-none border-none bg-transparent bg-none p-0 pr-8 font-roboto uppercase text-foreground',
+                    open && 'text-orange-450',
                   )}
                 >
                   {language}
                   <span className="pointer-events-none absolute right-0">
-                    <Icon type="lang" width={24} height={24} />
+                    <Icon
+                      type="lang"
+                      width={24}
+                      height={24}
+                      className={clsx(
+                        'stroke-foreground',
+                        open
+                          ? 'rotate-180 stroke-orange-450 transition-transform duration-300'
+                          : 'rotate-0 transition-transform duration-300',
+                      )}
+                    />
                   </span>
                 </ListboxButton>
               </div>
 
-              <ListboxOptions className="absolute left-0 top-[70px] h-[calc(100vh-70px)] w-[calc(100vw-26px)] bg-[rgba(10,10,10,0.7)] py-10">
+              <ListboxOptions className="absolute left-0 top-[70px] h-[calc(100vh-70px)] w-[calc(100vw-26px)] bg-[rgba(10,10,10,0.8)] py-10">
                 <div className="">
                   {ALL_LANGUAGES.map(lang => (
                     <ListboxOption
@@ -99,7 +109,7 @@ export const LangSelector: React.FC = () => {
           >
             {lang.key}
             {selectedLang === lang.key && (
-              <span className="absolute bottom-0 left-1/4 h-[1px] w-5 -translate-x-1/2 transform rounded-t-full bg-gradient-to-r from-transparent via-foreground to-transparent"></span>
+              <span className="absolute bottom-0 left-2.5 h-[1px] w-5 -translate-x-1/2 transform rounded-t-full bg-gradient-to-r from-transparent via-foreground to-transparent"></span>
             )}
             {index < ALL_LANGUAGES.length - 1 && (
               <Icon type="langDot" width={5} height={5} />

@@ -1,6 +1,6 @@
 // import Image from 'next/image';
 
-import { DevelopmentStages } from '@/components/pages/home/DevelopmentStages';
+// import { DevelopmentStages } from '@/components/pages/home/DevelopmentStages';
 import { OurWorks } from '@/components/pages/home/OurWorks/OurWorks';
 import { WeOffer } from '@/components/pages/home/WeOffer/WeOffer';
 import { OurAdvantages } from '@/components/pages/home/OurAdvantages/OurAdvantages';
@@ -10,7 +10,7 @@ export default async function Home() {
     <>
       <WeOffer />
       <OurWorks />
-      <DevelopmentStages />
+      {/*<DevelopmentStages />*/}
       <OurAdvantages />
     </>
     // <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">

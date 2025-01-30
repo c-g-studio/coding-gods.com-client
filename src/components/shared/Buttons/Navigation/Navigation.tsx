@@ -8,7 +8,7 @@ import React, { Fragment } from 'react';
 import clsx from 'clsx';
 import { useTranslate } from '@tolgee/react';
 
-export const ToggleMenuButton = () => {
+export const Navigation = () => {
   const { t } = useTranslate();
   return (
     <Menu as="div" className="relative">
@@ -18,7 +18,7 @@ export const ToggleMenuButton = () => {
             <span
               className={clsx(
                 'hidden font-roboto uppercase md:inline-block',
-                active && 'text-accentColor',
+                active && 'text-orange-450',
               )}
             >
               {t('header.sectionHeader.menuBtn')}
@@ -26,17 +26,17 @@ export const ToggleMenuButton = () => {
             <div className="group flex h-7 w-7 flex-col justify-center gap-[7px]">
               <span
                 className={clsx(
-                  `inline-block h-[2px] w-7 origin-top-left transform transition-transform duration-300`,
+                  `inline-block h-[2px] w-7 origin-top-left transform bg-foreground transition-transform duration-300`,
                   active
-                    ? '-translate-y-[5.5px] translate-x-[4.5px] rotate-45 rounded-[1px]'
+                    ? '-translate-y-[5.5px] translate-x-[4.5px] rotate-45 rounded-[1px] bg-orange-450'
                     : 'translate-x-0 translate-y-0 rotate-0',
                 )}
               ></span>
               <span
                 className={clsx(
-                  `inline-block h-[2px] w-[19px] origin-bottom-left transform transition-transform duration-300`,
+                  `inline-block h-[2px] w-[19px] origin-bottom-left transform bg-foreground transition-transform duration-300`,
                   active
-                    ? 'w-[28px] translate-x-[4.5px] translate-y-[5px] -rotate-45 rounded-[1px]'
+                    ? 'w-[28px] translate-x-[4.5px] translate-y-[5px] -rotate-45 rounded-[1px] bg-orange-450'
                     : 'w-[19px] translate-x-0 translate-y-0 rotate-0 rounded-none',
                 )}
               ></span>
@@ -45,7 +45,7 @@ export const ToggleMenuButton = () => {
           </button>
         )}
       </MenuButton>
-      <MenuItems className="absolute right-0 top-[79px] flex h-[calc(100vh-79px)] w-lvw flex-col items-center justify-center bg-[rgba(10,10,10,0.7)] backdrop-blur-[27px] md:w-[334px]">
+      <MenuItems className="absolute right-0 top-[79px] flex h-[calc(100vh-79px)] w-lvw flex-col items-center justify-center bg-[rgba(10,10,10,0.8)] backdrop-blur-[27px] md:w-[334px]">
         <nav className="w-full">
           {NAVIGATIONS.map(item => (
             <li
