@@ -14,12 +14,13 @@ export default async function LocaleLayout({ children }: WithChildren) {
   const locale = await getLanguage();
   const staticData = await getStaticData([locale]);
   const t = await getTranslate();
+
   return (
     <html
       lang={locale}
       className={`${baloo.variable} ${roboto.variable} ${interRegular.variable} ${interMedium.variable} ${bungee.variable}`}
     >
-      <body>
+      <body className="flex h-full min-h-screen flex-col">
         <TolgeeNextProvider language={locale} staticData={staticData}>
           <Header />
           <nav className={'flex justify-center gap-4'}>
@@ -27,7 +28,9 @@ export default async function LocaleLayout({ children }: WithChildren) {
             <Link href={'/portfolio'}>{t('contactsPage')}</Link>
             <Link href={'/contacts'}>{t('portfolioPage')}</Link>
           </nav>
-          {children}
+
+          <main className="flex-grow">{children}</main>
+
           <Footer />
         </TolgeeNextProvider>
       </body>
