@@ -4,8 +4,9 @@ import { getTranslate } from '@/tolgee/server';
 
 export const FooterList: FC<TFooterList> = async ({ arr }) => {
   const t = await getTranslate();
+
   return (
-    <ul className="flex flex-col gap-6 text-center">
+    <ul className="space-y-6 lg:text-center">
       {arr.map(item => (
         <li key={item} className="text-sm">
           {t(item)}

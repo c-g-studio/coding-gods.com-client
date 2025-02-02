@@ -7,8 +7,53 @@
     #0a0a0a;
 }
 
+.footerContainer {
+  display: grid;
+  width: 100%;
+  grid-template-areas:
+    'logo logo'
+    'siteMap socialMedia'
+    'form form';
+  gap: 64px;
+  margin-bottom: 43px;
+}
+
+.footerLogo {
+  grid-area: logo;
+}
+
+.footerSiteMap {
+  grid-area: siteMap;
+  justify-self: center;
+}
+
+.footerSocialMedia {
+  grid-area: socialMedia;
+  justify-self: center;
+}
+
+.footerForm {
+  grid-area: form;
+}
+
 @media screen and (min-width: 768px) {
   .footer {
     background: none;
+  }
+
+  .footerContainer {
+    grid-template-areas:
+      'logo siteMap socialMedia'
+      'form siteMap socialMedia';
+    gap: 64px;
+    margin-bottom: 74px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footerContainer {
+    grid-template-areas: 'logo siteMap socialMedia form';
+    gap: 38px;
+    margin-bottom: 74px;
   }
 }
