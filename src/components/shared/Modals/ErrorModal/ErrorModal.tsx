@@ -21,9 +21,7 @@ export const ErrorModal: FC<ErrorModalProps> = ({ isError, modalToggler }) => {
     >
       <div className="relative w-[288px] rounded-3xl border border-[rgba(255,255,255,0.05)] bg-background px-6 py-8 md:w-[592px]">
         <GradientLine
-          positionY={'-top-[1px]'}
-          width={'w-[236px] md:w-[540px]'}
-          left={'left-[26px]'}
+          className={'-top-[1px] left-[26px] w-[236px] md:w-[540px]'}
         />
         <div className="flex flex-col items-center gap-8">
           <Icon type={'iconError'} width={58} height={58} />
@@ -70,9 +68,7 @@ export const ErrorModal: FC<ErrorModalProps> = ({ isError, modalToggler }) => {
           </div>
         </div>
         <GradientLine
-          positionY={'-bottom-[1px]'}
-          width={'w-[236px] md:w-[540px]'}
-          left={'left-[26px]'}
+          className={'-bottom-[1px] left-[26px] w-[236px] md:w-[540px]'}
         />
       </div>
     </div>

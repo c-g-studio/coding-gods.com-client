@@ -1,10 +1,17 @@
-import React, { FC } from 'react';
-import { TGradientLine } from '@/components/shared/GradientLine/gradientLine.types';
+import React, { ComponentPropsWithoutRef, FC } from 'react';
+import { classnames } from '@/utils/classnames';
 
-export const GradientLine: FC<TGradientLine> = ({ positionY }) => {
+export const GradientLine: FC<ComponentPropsWithoutRef<'div'>> = ({
+  className,
+  ...props
+}) => {
   return (
     <div
-      className={`absolute left-0 ${positionY} h-[1px] w-full bg-gradient-to-r from-transparent via-foreground to-transparent`}
+      className={classnames(
+        `absolute left-0 top-0 h-[1px] w-full bg-gradient-to-r from-transparent via-foreground to-transparent`,
+        className,
+      )}
+      {...props}
     />
   );
 };

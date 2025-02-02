@@ -18,12 +18,12 @@ export const Footer = async () => {
       className={`${styles.footer} lg:pb-[41px]} relative text-pretty pb-[51px] pt-11 md:pb-[27px]`}
     >
       <div className="container">
-        <GradientLine positionY="top-0" />
+        <GradientLine />
         {/* Footer Container */}
         <div className={`${styles.footerContainer}`}>
           {/* Logo */}
           <div className={`${styles.footerLogo} mx-auto max-w-[272px] md:mx-0`}>
-            <Logo fontSize="text-4xl" />
+            <Logo href={'/'} />
             <Typography>{t('footer.sectionFooter.text')}</Typography>
           </div>
 

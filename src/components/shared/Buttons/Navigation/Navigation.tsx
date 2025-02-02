@@ -53,11 +53,8 @@ export const Navigation = () => {
               className="group relative h-16 cursor-pointer list-none text-sm"
             >
               <GradientLine
-                left={'left-1/2'}
-                positionY={'top-0'}
-                width={'w-0'}
-                animation={
-                  'transition-all duration-300 group-hover:w-full group-hover:left-0'
+                className={
+                  'left-1/2 w-0 transition-all duration-300 group-hover:left-0 group-hover:w-full'
                 }
               />
               <Link
@@ -67,11 +64,8 @@ export const Navigation = () => {
                 {t(item.key)}
               </Link>
               <GradientLine
-                left={'left-1/2'}
-                positionY={'bottom-0'}
-                width={'w-0'}
-                animation={
-                  'transition-all duration-300 group-hover:w-full group-hover:left-0'
+                className={
+                  'bottom-0 left-1/2 w-0 transition-all duration-300 group-hover:left-0 group-hover:w-full'
                 }
               />
             </li>
