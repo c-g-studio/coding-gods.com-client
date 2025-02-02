@@ -21,12 +21,12 @@ export const Typography: FC<Props> = ({
     <Component
       className={classnames(
         'font-inter text-xs font-normal text-zinc-200 md:text-sm',
-        className,
         {
           'text-2xl font-medium md:text-5xl lg:text-[64px]': variant === 'h1',
           'mb-6 text-2xl font-medium md:text-5xl lg:mb-12': variant === 'h2',
           'text-base font-medium md:text-lg': variant === 'h3',
         },
+        className,
       )}
       {...props}
     >
