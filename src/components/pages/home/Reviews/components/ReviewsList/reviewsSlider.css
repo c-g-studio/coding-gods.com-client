@@ -1,0 +1,38 @@
+.swiper.reviews_swiper_global {
+  overflow: visible;
+}
+
+.reviews_swiper_global .swiper-wrapper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+}
+
+.reviews_swiper_global .swiper-wrapper {
+  margin-left: 25px;
+}
+
+.reviews_swiper_global .swiper-wrapper .swiper-slide {
+  margin-right: 50px;
+
+}
+
+@media screen and (min-width: 768px) {
+  .reviews_swiper_global .swiper-wrapper .swiper-slide {
+    height: 260px;
+  }
+
+  .reviews_swiper_global .swiper-wrapper {
+    margin-left: 0;
+  }
+
+  .reviews_swiper_global .swiper-wrapper .swiper-slide {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .swiper.reviews_swiper_global {
+    overflow: hidden;
+  }
+}
