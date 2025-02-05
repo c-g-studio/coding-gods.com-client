@@ -20,6 +20,7 @@
 @media screen and (min-width: 768px) {
   .reviews_swiper_global .swiper-wrapper .swiper-slide {
     height: 260px;
+    flex-direction: row;
   }
 
   .reviews_swiper_global .swiper-wrapper {

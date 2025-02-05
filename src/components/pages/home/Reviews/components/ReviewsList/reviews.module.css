@@ -15,7 +15,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  padding: 1px; /* Толщина границы */
+  padding: 2px; /* Толщина границы */
   border-radius: 20px; /* Закругление */
   background: transparent;
   border: 1px solid transparent; /* Убираем стандартную границу */
@@ -24,8 +24,11 @@
   -webkit-mask-composite: xor;
 }
 
+
 @media screen and (min-width: 768px) {
   .backgroundGradient {
     background: none;
   }
 }
+
+

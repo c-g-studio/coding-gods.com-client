@@ -5,9 +5,11 @@ import {ReviewsList} from "@/components/pages/home/Reviews/components/ReviewsLis
 
 export const Reviews: FC = (): React.JSX.Element => {
   return <Section className="overflow-hidden lg:overflow-visible">
-    <Typography variant="h2" className="text-center ">
-      Відгуки
-    </Typography>
-    <ReviewsList/>
+    <div className="xl:px-[86px]">
+      <Typography variant="h2" className="text-center ">
+        Відгуки
+      </Typography>
+      <ReviewsList/>
+    </div>
   </Section>
 }

@@ -1,18 +1,19 @@
 'use client'
 import React, {FC} from "react";
-import {Card, Cards} from '@/components/ui/Card/Card';
 import Image from "next/image";
 import {Typography} from "@/components/ui/Typography/Typography";
 import {Swiper, SwiperSlide} from "swiper/react";
 import s from "./reviews.module.css"
 import 'swiper/css';
+import {AvatarBlock} from "@/components/pages/home/Reviews/components/AvatarBlock/AvatarBlock";
+import {InfoBlock} from "@/components/pages/home/Reviews/components/InfoBlock/InfoBlock";
 
 const mockData = [
   {
     id: "1",
     img: "/images/about-us/about-us-medium.jpg",
     title: "Vika",
-    review: "Дякуємо за вашу службу. Результатом я задоволена. На всіх етапах розробки проукту відчувалась підтримка команди.",
+    review: "Дякуємо за вашу службу. Результатом я задоволена. На всіх етапах розробки проукту відчувалась підтримка команди. Дякуємо за вашу службу. Результатом я задоволена. На всіх етапах розробки проукту відчувалась підтримка команди. Дякуємо за вашу службу. Результатом я задоволена. На всіх етапах розробки проукту відчувалась підтримка команди.",
     source: "Google Maps",
     icon: "/globe.svg"
   },
@@ -34,60 +35,40 @@ const mockData = [
   },
   {
     id: "4",
-    img: "/images/about-us/about-us-medium.jpg",
+    img: "",
     title: "Dana",
     review: "Фуфлыжныики, запороли что-то. Онлифанс не работает",
     source: "Google Maps",
     icon: "/globe.svg"
   }
 ]
-// className={`flex w-[220px] flex-col rounded-[20px] border border-zinc-200 border-opacity-20 px-4 pt-6 pb-[34px] md:w-[260px] md:px-[26px] max-w-[220px] mr-[50px] md:max-w-full ${s.backgroundGradient}`}>
-
-
+const breakpoints = {
+  768: {
+    spaceBetween: 32,
+    slidesPerView: 1.25,
+    centeredSlides: false
+  },
+  1200: {
+    spaceBetween: 32,
+    centeredSlides: false,
+    slidesPerView: 2
+  }
+}
 export const ReviewsList: FC = (): React.JSX.Element => {
   return <Swiper
     slidesPerView={'auto'}
     centeredSlides={true}
-    breakpoints={{
-      768: {
-        spaceBetween: 50,
-        slidesPerView: 1.25,
-        centeredSlides: false
-      },
-      1440: {
-        spaceBetween: 50,
-        centeredSlides: false,
-        slidesPerView: 2
-      }
-    }}
-    onSlideChange={() => console.log('slide change')}
-    onSwiper={(swiper) => console.log(swiper)}
+    breakpoints={breakpoints}
     className="w-full reviews_swiper_global"
   >
     {mockData && mockData.map((mockDatum) => (
       <SwiperSlide
         key={mockDatum.id}
-        className={`rounded-[20px] border border-zinc-200 border-opacity-20 px-4 pt-6 pb-[34px] md:px-[26px] max-w-[220px] md:max-w-full h-[300px] md:h-[260px] ${s.backgroundGradient}`}>
-        <div className="overflow-hidden w-20 h-20 rounded-[50%] flex items-center justify-center mx-auto mb-4">
-          <Image src={mockDatum.img} alt="Зобарження користувача" width={80} height={80}
-                 className="object-cover rounded-[50%] w-20 h-20"/>
-        </div>
-        <div className="flex-grow flex flex-col justify-between">
-          <Typography variant="p" className="mb-4 text-[10px]/[1.8]">
-            {mockDatum.review}
-          </Typography>
-          <div>
-            <Typography variant="h3" className="mb-4 text-2xl/[1.71]">
-              {mockDatum.title}
-            </Typography>
-            <div className="flex gap-2 mt-auto">
-              <Typography variant="p" className="text-[10px]/[1.8]">
-                {mockDatum.source}
-              </Typography>
-              <Image src={mockDatum.icon} alt="Зобарження Користувача" width={20} height={20}/>
-            </div>
-          </div>
-        </div>
+        className={`rounded-[20px] border border-zinc-200 border-opacity-20 px-4 pt-6 pb-[34px] md:pl-[200px] lg:pl-[180px] md:pr-[32px] max-w-[220px] md:max-w-full h-[300px] md:h-[260px] relative ${s.backgroundGradient}`}>
+        <AvatarBlock imgPath={mockDatum.img}/>
+        <InfoBlock review={mockDatum.review} title={mockDatum.title} source={mockDatum.source} icon={mockDatum.icon}/>
+        <Image src="/images/reviews/border-quote.svg" alt={"декор елемент"} width={409} height={197}
+               className="hidden md:block absolute -z-10 left-[22%] top-[26px] lg:top-[32px] xl:top-[26px] md:w-[409px] lg:w-[380px] xl:w-[409px] "/>
       </SwiperSlide>
     ))}
   </Swiper>
