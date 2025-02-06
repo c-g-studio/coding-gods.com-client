@@ -1,10 +1,22 @@
-// const { NEXT_PUBLIC_BASE_URL, NEXT_PUBLIC_API_TOKEN } = process.env;
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+import axios, { AxiosResponse } from 'axios';
+import { ReviewAdapterType } from '@/utils/reviewAdapter/adapterTypes';
 
-export const getAllReviews = async () => {
-  try {
-    return await fetch(BASE_URL);
-  } catch (error) {
-    console.error(error);
-  }
-};
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+const API_TOKEN = process.env.NEXT_PUBLIC_API_TOKEN;
+
+interface ReviewsResponse {
+  data: ReviewAdapterType[];
+}
+
+export const getReviews =
+  async (): Promise<AxiosResponse<ReviewsResponse> | null> => {
+    try {
+      return await axios(`${BASE_URL}/api/reviews`, {
+        headers: {
+          Authorization: `Bearer ${API_TOKEN}`,
+        },
+      });
+    } catch {
+      return null;
+    }
+  };

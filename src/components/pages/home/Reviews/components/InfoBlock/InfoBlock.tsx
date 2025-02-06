@@ -17,10 +17,10 @@ export const InfoBlock: FC<InfoBlockTypes> = ({
   icon,
 }): React.JSX.Element => {
   return (
-    <div className="flex flex-grow flex-col justify-between md:w-[70%] md:justify-around">
+    <div className="flex flex-grow flex-col justify-between md:w-[70%] md:justify-between md:pb-2 md:pt-3">
       <Typography
         variant="p"
-        className={`relative mb-4 h-max max-h-[70px] overflow-y-auto text-[10px]/[1.8] md:max-h-[87px] lg:max-h-[100px] ${s.customScrollbar}`}
+        className={`relative mb-4 h-max max-h-[50px] overflow-y-auto text-[10px]/[1.8] md:max-h-[100px] lg:max-h-[80px] xl:max-h-[100px] ${s.customScrollbar}`}
       >
         {review}
       </Typography>
@@ -33,7 +33,7 @@ export const InfoBlock: FC<InfoBlockTypes> = ({
         </Typography>
         <div className="mt-auto flex gap-2">
           <Typography variant="p" className="text-[10px]/[1.8]">
-            {source}
+            Відгук на {source}
           </Typography>
           <Image
             src={icon}
