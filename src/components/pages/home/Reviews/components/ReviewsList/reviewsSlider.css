@@ -14,13 +14,14 @@
 
 .reviews_swiper_global .swiper-wrapper .swiper-slide {
   margin-right: 50px;
-
 }
 
 @media screen and (min-width: 768px) {
   .reviews_swiper_global .swiper-wrapper .swiper-slide {
     height: 260px;
     flex-direction: row;
+
+    max-width: 556px;
   }
 
   .reviews_swiper_global .swiper-wrapper {
@@ -28,12 +29,27 @@
   }
 
   .reviews_swiper_global .swiper-wrapper .swiper-slide {
+    margin-right: 32px;
+  }
+
+  .reviews_swiper_global .swiper-wrapper .swiper-slide:last-child {
     margin-right: 0;
   }
 }
 
+
 @media screen and (min-width: 1200px) {
   .swiper.reviews_swiper_global {
     overflow: hidden;
+  }
+
+  .reviews_swiper_global .swiper-wrapper .swiper-slide {
+    max-width: 524px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .reviews_swiper_global .swiper-wrapper .swiper-slide {
+    max-width: 556px;
   }
 }

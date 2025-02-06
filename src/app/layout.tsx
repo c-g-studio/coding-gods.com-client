@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import { TolgeeNextProvider } from '@/tolgee/client';
-import { getStaticData } from '@/tolgee/shared';
-import { getLanguage } from '@/tolgee/language';
-import '@/app/globals.css';
-import { getTranslate } from '@/tolgee/server';
-import { Header } from '@/components/layout/Header/Header';
-import { Footer } from '@/components/layout/Footer/Footer';
 import { baloo, bungee, interMedium, interRegular, roboto } from '@/app/fonts';
+import '@/app/globals.css';
+import { Footer } from '@/components/layout/Footer/Footer';
+import { Header } from '@/components/layout/Header/Header';
+import { TolgeeNextProvider } from '@/tolgee/client';
+import { getLanguage } from '@/tolgee/language';
+import { getTranslate } from '@/tolgee/server';
+import { getStaticData } from '@/tolgee/shared';
+import Link from 'next/link';
 
 import { WithChildren } from '@/types/common';
 
