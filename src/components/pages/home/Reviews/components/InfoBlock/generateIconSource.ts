@@ -11,6 +11,6 @@ export const generateIconSource = (name: string): string => {
     case 'linkedin':
       return '/images/reviews/icons-social/linkedin.svg';
     default:
-      return '/images/globe.svg';
+      return '/images/reviews/icons-social/globe.svg';
   }
 };

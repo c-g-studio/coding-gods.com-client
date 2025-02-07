@@ -2,6 +2,7 @@ import { Typography } from '@/components/ui/Typography/Typography';
 import s from './style.module.css';
 import Image from 'next/image';
 import React, { FC } from 'react';
+import { generateIconSource } from '@/components/pages/home/Reviews/components/InfoBlock/generateIconSource';
 
 type InfoBlockTypes = {
   review: string;
@@ -36,7 +37,7 @@ export const InfoBlock: FC<InfoBlockTypes> = ({
             Відгук на {source}
           </Typography>
           <Image
-            src={icon}
+            src={generateIconSource(icon)}
             alt="Зобарження Користувача"
             width={20}
             height={20}

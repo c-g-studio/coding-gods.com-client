@@ -38,6 +38,6 @@ export type ResponseAdapterType = {
   documentId: string;
   id: string;
   source: string;
-  avatar: string | undefined;
+  avatar?: string;
   updatedAt: string;
 };

@@ -60,7 +60,7 @@ export const ReviewsList: FC = (): React.JSX.Element => {
               review={review.description}
               title={review.name}
               source={review.source}
-              icon={generateIconSource(review.source)}
+              icon={review.source}
             />
             <Image
               src="/images/reviews/border-quote.svg"
