@@ -1,35 +1,16 @@
 'use client';
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import s from './reviews.module.css';
 import 'swiper/css';
 import { AvatarBlock } from '@/components/pages/home/Reviews/components/AvatarBlock/AvatarBlock';
 import { InfoBlock } from '@/components/pages/home/Reviews/components/InfoBlock/InfoBlock';
-import { getReviews } from '@/services/reviewsService';
-import { reviewAdapter } from '@/utils/reviewAdapter/reviewAdaper';
-import { generateIconSource } from '@/components/pages/home/Reviews/components/InfoBlock/generateIconSource';
 import { ResponseAdapterType } from '@/utils/reviewAdapter/adapterTypes';
 
-export const ReviewsList: FC = (): React.JSX.Element => {
-  const [reviews, setReviews] = useState<ResponseAdapterType[]>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await getReviews();
-        if (!response || !response.data) return;
-
-        const adaptData = reviewAdapter(response.data.data);
-        setReviews(adaptData);
-      } catch {
-        console.error('Ошибка загрузки отзывов');
-      }
-    };
-
-    fetchData();
-  }, []);
-
+export const ReviewsList: FC<{ reviews: ResponseAdapterType[] }> = ({
+  reviews,
+}): React.JSX.Element => {
   return (
     <Swiper
       slidesPerView={'auto'}

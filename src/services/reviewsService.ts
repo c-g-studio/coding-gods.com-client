@@ -1,4 +1,3 @@
-import axios, { AxiosResponse } from 'axios';
 import { ReviewAdapterType } from '@/utils/reviewAdapter/adapterTypes';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
@@ -8,15 +7,17 @@ interface ReviewsResponse {
   data: ReviewAdapterType[];
 }
 
-export const getReviews =
-  async (): Promise<AxiosResponse<ReviewsResponse> | null> => {
-    try {
-      return await axios(`${BASE_URL}/api/reviews`, {
-        headers: {
-          Authorization: `Bearer ${API_TOKEN}`,
-        },
-      });
-    } catch {
-      return null;
-    }
-  };
+export const getReviews = async (): Promise<ReviewsResponse> => {
+  try {
+    const response = await fetch(`${BASE_URL}/api/reviews`, {
+      headers: {
+        Authorization: `Bearer ${API_TOKEN}`,
+      },
+    });
+
+    return await response.json();
+  } catch (error) {
+    console.error('Error fetching reviews:', error);
+    return { data: [] };
+  }
+};
