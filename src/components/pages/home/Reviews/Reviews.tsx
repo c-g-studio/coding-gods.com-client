@@ -5,9 +5,12 @@ import { ReviewsList } from '@/components/pages/home/Reviews/components/ReviewsL
 import { getReviews } from '@/services/reviewsService';
 import { reviewAdapter } from '@/utils/reviewAdapter/reviewAdaper';
 
-export const Reviews: FC = async (): Promise<React.JSX.Element> => {
+export const Reviews: FC = async (): Promise<React.JSX.Element | null> => {
   const data = await getReviews();
   const adaptData = reviewAdapter(data.data);
+
+  if (adaptData.length === 0) return null;
+
   return (
     <Section className="overflow-hidden lg:overflow-visible">
       <div className="xl:px-[86px]">
