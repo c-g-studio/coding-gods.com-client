@@ -5,6 +5,7 @@ import { OurAdvantages } from '@/components/pages/home/OurAdvantages/OurAdvantag
 import { AboutUs } from '@/components/pages/home/AboutUs';
 import { Hero } from '@/components/pages/home/Hero';
 import { Form } from '@/components/pages/home/Form';
+import { Reviews } from '@/components/pages/home/Reviews/Reviews';
 
 export default async function Home() {
   return (
@@ -16,6 +17,7 @@ export default async function Home() {
       <DevelopmentStages />
       <OurAdvantages />
       <Form />
+      <Reviews />
     </>
   );
 }

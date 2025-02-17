@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss';
+import type {Config} from 'tailwindcss';
 
 export default {
   content: [
@@ -32,6 +32,10 @@ export default {
         'zinc-300': '#CDCDCD',
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+      },
+      backgroundImage: {
+        'ellipse-pattern': "url('/images/reviews/ellipse.svg')",
+        'border-quote': "url('/images/reviews/border-quote.svg')",// Твой путь к изображению
       },
       fontFamily: {
         inter: 'var(--font-inter-regular)',

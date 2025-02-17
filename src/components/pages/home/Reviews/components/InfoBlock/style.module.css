@@ -1,0 +1,19 @@
+/* Красивый скроллбар */
+.customScrollbar {
+  scrollbar-width: thin; /* Для Firefox */
+  scrollbar-color: rgba(136, 136, 136, 0.8) transparent;
+}
+
+/* Для WebKit (Chrome, Safari, Edge) */
+.customScrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.customScrollbar::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.8);
+  border-radius: 4px;
+}
+
+.customScrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}

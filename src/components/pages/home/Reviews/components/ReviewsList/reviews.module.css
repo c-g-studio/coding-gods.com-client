@@ -1,0 +1,34 @@
+.backgroundGradient {
+  background: linear-gradient(
+    132deg,
+    rgba(155, 155, 155, 0.2) 7.71%,
+    rgba(0, 0, 0, 0) 71.33%
+  ),
+  #0a0a0a;
+
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.backgroundGradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* Толщина границы */
+  border-radius: 20px; /* Закругление */
+  background: transparent;
+  border: 1px solid transparent; /* Убираем стандартную границу */
+  border-image: linear-gradient(to right, #ffffff20, white, #ffffff20) 1%; /* Градиент для бордера */
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+}
+
+
+@media screen and (min-width: 768px) {
+  .backgroundGradient {
+    background: none;
+  }
+}
+
+

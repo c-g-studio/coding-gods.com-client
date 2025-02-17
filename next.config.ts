@@ -4,6 +4,13 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
 
   images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'c-g-studio-coding-gods-com-server.onrender.com',
+      },
+    ],
+
     formats: ['image/webp'],
   },
   // check support with turbopack

@@ -1,0 +1,23 @@
+import { ReviewAdapterType } from '@/utils/reviewAdapter/adapterTypes';
+
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+const API_TOKEN = process.env.NEXT_PUBLIC_API_TOKEN;
+
+interface ReviewsResponse {
+  data: ReviewAdapterType[];
+}
+
+export const getReviews = async (): Promise<ReviewsResponse> => {
+  try {
+    const response = await fetch(`${BASE_URL}/api/reviews`, {
+      headers: {
+        Authorization: `Bearer ${API_TOKEN}`,
+      },
+    });
+
+    return await response.json();
+  } catch (error) {
+    console.error('Error fetching reviews:', error);
+    return { data: [] };
+  }
+};
