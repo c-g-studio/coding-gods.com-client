@@ -35,7 +35,7 @@ export const WeOffer: NextPage = async () => {
 
   return (
     <Section className="text-center">
-      <Typography variant="h2">Ми пропонуємо</Typography>
+      <Typography variant="h2">{t('home.sectionWeOffer.title')}</Typography>
 
       <Cards.Wrapper className="mx-auto grid max-w-[220px] grid-cols-1 gap-3.5 self-stretch text-balance md:max-w-[536px] md:grid-cols-2 lg:max-w-[1082px] lg:grid-cols-4">
         {cardData.map(({ key, link, translateKeys }) => (
