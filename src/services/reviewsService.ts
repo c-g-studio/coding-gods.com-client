@@ -1,7 +1,7 @@
 import { ReviewAdapterType } from '@/utils/reviewAdapter/adapterTypes';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
-const API_TOKEN = process.env.NEXT_PUBLIC_API_TOKEN;
+const NEXT_PUBLIC_SANITY_BASE_URL = process.env.NEXT_PUBLIC_SANITY_BASE_URL;
+const NEXT_PUBLIC_SANITY_API_TOKEN = process.env.NEXT_PUBLIC_SANITY_API_TOKEN;
 
 interface ReviewsResponse {
   data: ReviewAdapterType[];
@@ -9,9 +9,9 @@ interface ReviewsResponse {
 
 export const getReviews = async (): Promise<ReviewsResponse> => {
   try {
-    const response = await fetch(`${BASE_URL}/api/reviews`, {
+    const response = await fetch(`${NEXT_PUBLIC_SANITY_BASE_URL}/api/reviews`, {
       headers: {
-        Authorization: `Bearer ${API_TOKEN}`,
+        Authorization: `Bearer ${NEXT_PUBLIC_SANITY_API_TOKEN}`,
       },
     });
 

@@ -5,31 +5,22 @@ import { Section } from '@/components/shared/Section/Section';
 import { TextWrapper } from './components/TextWrapper';
 import { CustomLink } from '@/components/ui/CustomLink/CustomLink';
 import Image from 'next/image';
+import { getTranslate } from '@/tolgee/server';
 
-export const AboutUs: FC = () => {
+export const AboutUs: FC = async () => {
+  const t = await getTranslate();
+
   return (
     <Section>
       <div className="grid text-pretty lg:grid-cols-2 lg:gap-x-[125px] lg:gap-y-10">
         <Typography variant="h2" className="text-center lg:text-left">
-          Про нас
+          {t('home.sectionAboutUs.title')}
         </Typography>
 
         <TextWrapper>
-          <Typography>
-            Ми - команда клієнтоорієнтованих фахівців, що вірить у силу
-            інтернету як інструменту для трансформації бізнесу та творчості.
-            Наша студія спеціалізується на дизайні та розробці веб-сайтів,
-            створюючи унікальні інтернет-простори, які відзеркалюють ваш бренд
-            та привертають увагу аудиторії. Ваші бізнес-цілі для нас завжди є
-            відправною точкою.
-          </Typography>
+          <Typography>{t('home.sectionAboutUs.textOne')}</Typography>
 
-          <Typography>
-            Ми не просто розробляємо веб-сайти. Ми створюємо цифрові історії,
-            які спільно з вами будують успіх. Наша місія — надихати, інноваційно
-            вирішувати завдання та робити ваш бізнес видимим у великому світі
-            інтернету.
-          </Typography>
+          <Typography>{t('home.sectionAboutUs.textTwo')}</Typography>
         </TextWrapper>
 
         <Image
@@ -52,24 +43,13 @@ export const AboutUs: FC = () => {
 
         <div className="grid gap-y-10 lg:self-center">
           <TextWrapper>
-            <Typography>
-              Незалежно від масштабів вашого бізнесу наша місія - допомогти вам
-              знайти та втілити ваш унікальний стиль, який буде висвітлювати
-              особливості вашого бренду та забезпечувати вам конкурентні
-              переваги на ринку.
-            </Typography>
+            <Typography>{t('home.sectionAboutUs.textThree')}</Typography>
 
-            <Typography>
-              Ми прагнемо не просто створити дизайн, але і вибудувати ваш
-              брендовий імідж, який буде відображати унікальність та цінності
-              вашого підприємства. Ви можете розраховувати на індивідуальний
-              підхід та професійний погляд на кожен аспект створення вашого
-              стилю.
-            </Typography>
+            <Typography>{t('home.sectionAboutUs.textFour')}</Typography>
           </TextWrapper>
 
           <CustomLink href="/about" className="mx-auto">
-            Дізнатися більше
+            {t('home.sectionAboutUs.knowMoreBtn')}
           </CustomLink>
         </div>
       </div>

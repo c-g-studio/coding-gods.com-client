@@ -4,16 +4,13 @@ import { Footer } from '@/components/layout/Footer/Footer';
 import { Header } from '@/components/layout/Header/Header';
 import { TolgeeNextProvider } from '@/tolgee/client';
 import { getLanguage } from '@/tolgee/language';
-import { getTranslate } from '@/tolgee/server';
 import { getStaticData } from '@/tolgee/shared';
-import Link from 'next/link';
 
 import { WithChildren } from '@/types/common';
 
 export default async function LocaleLayout({ children }: WithChildren) {
   const locale = await getLanguage();
   const staticData = await getStaticData([locale]);
-  const t = await getTranslate();
   return (
     <html
       lang={locale}
@@ -22,11 +19,6 @@ export default async function LocaleLayout({ children }: WithChildren) {
       <body>
         <TolgeeNextProvider language={locale} staticData={staticData}>
           <Header />
-          <nav className={'flex justify-center gap-4'}>
-            <Link href={'/about'}>{t('aboutPage')}</Link>
-            <Link href={'/portfolio'}>{t('contactsPage')}</Link>
-            <Link href={'/contacts'}>{t('portfolioPage')}</Link>
-          </nav>
           {children}
           <Footer />
         </TolgeeNextProvider>

@@ -5,15 +5,18 @@ import { DevelopmentChart } from '@/components/pages/home/DevelopmentStages/comp
 import { DevelopmentStagesList } from '@/components/pages/home/DevelopmentStages/components/DevelopmentStagesList';
 import { Section } from '@/components/shared/Section/Section';
 import { Typography } from '@/components/ui/Typography/Typography';
+import { getTranslate } from '@/tolgee/server';
 
-export const DevelopmentStages: FC = () => {
+export const DevelopmentStages: FC = async () => {
+  const t = await getTranslate();
+
   return (
     <Section>
       <Typography
         className="motion-preset-expand text-center motion-delay-100"
         variant="h2"
       >
-        Етапи розробки
+        {t('home.sectionDevStages.title')}
       </Typography>
 
       <div className="relative mx-auto hidden w-[1134px] items-center gap-x-[262px] lg:flex">
